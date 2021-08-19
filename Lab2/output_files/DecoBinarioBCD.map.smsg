@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at conversorBinarioBCD.sv(1): object "A3" differs only in case from object "a3" in the same scope File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv Line: 1
+Info (10281): Verilog HDL Declaration information at conversorBinarioBCD.sv(1): object "A2" differs only in case from object "a2" in the same scope File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv Line: 1
+Info (10281): Verilog HDL Declaration information at conversorBinarioBCD.sv(1): object "A1" differs only in case from object "a1" in the same scope File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv Line: 1
