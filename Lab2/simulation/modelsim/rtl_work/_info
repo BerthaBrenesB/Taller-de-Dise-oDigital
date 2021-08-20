@@ -1,0 +1,65 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/berta/OneDrive/Documentos/TallerD/lab2/simulation/modelsim
+vconversorBinarioBCD
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1629392136
+!i10b 1
+!s100 ?iFnRRS>7>o9kJ`8SZ`iQ2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Io[ID5CZ>UX]2DmmdijUZ_3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1629248843
+8C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv
+FC:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv
+!i122 0
+L0 1 20
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1629392136.000000
+!s107 C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2|C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2
+Z7 tCvgOpt 0
+nconversor@binario@b@c@d
+vDecoBinarioBCD_tb
+R1
+!s110 1629392137
+!i10b 1
+!s100 CgFz30g1dm<SH@B20P0_d0
+R2
+I8T>g;=ELj>CE6_^?GXSI]3
+R3
+S1
+R0
+w1629392113
+8C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv
+FC:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv
+!i122 1
+L0 1 97
+R4
+r1
+!s85 0
+31
+!s108 1629392137.000000
+!s107 C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2|C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv|
+!i113 1
+R5
+R6
+R7
+n@deco@binario@b@c@d_tb

@@ -1,0 +1,63 @@
+# Reading pref.tcl
+# do DecoBinarioBCD_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2 {C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:36 on Aug 19,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2" C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv 
+# -- Compiling module conversorBinarioBCD
+# 
+# Top level modules:
+# 	conversorBinarioBCD
+# End time: 10:55:36 on Aug 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2 {C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:55:37 on Aug 19,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/lab2" C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv 
+# -- Compiling module DecoBinarioBCD_tb
+# 
+# Top level modules:
+# 	DecoBinarioBCD_tb
+# End time: 10:55:37 on Aug 19,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.DecoBinarioBCD_tb
+# vsim work.DecoBinarioBCD_tb 
+# Start time: 10:56:32 on Aug 19,2021
+# Loading sv_std.std
+# Loading work.DecoBinarioBCD_tb
+# Loading work.conversorBinarioBCD
+add wave -position end  sim:/DecoBinarioBCD_tb/B3
+add wave -position end  sim:/DecoBinarioBCD_tb/B2
+add wave -position end  sim:/DecoBinarioBCD_tb/B1
+add wave -position end  sim:/DecoBinarioBCD_tb/B0
+add wave -position end  sim:/DecoBinarioBCD_tb/A3
+add wave -position end  sim:/DecoBinarioBCD_tb/A2
+add wave -position end  sim:/DecoBinarioBCD_tb/A1
+add wave -position end  sim:/DecoBinarioBCD_tb/A0
+runru
+# invalid command name "runru"
+RUN
+# invalid command name "RUN"
+run
+# Iniciando simulacion numero 
+# Numero 2
+# Numero 4
+run
+# Numero 7
+# Numero 8
+run
+# Numero 11
+# Numero 12
+# End time: 11:00:13 on Aug 19,2021, Elapsed time: 0:03:41
+# Errors: 0, Warnings: 0

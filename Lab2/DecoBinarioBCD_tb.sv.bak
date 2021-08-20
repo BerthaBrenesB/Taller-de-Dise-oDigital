@@ -1,0 +1,3 @@
+module conversorBinarioBCD_tb();
+  
+endmodule 
