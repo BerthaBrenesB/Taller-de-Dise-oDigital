@@ -1,0 +1,4 @@
+entity sumador1bit is
+   port( X, Y, Cin : in std_logic;
+         sum, Cout : out std_logic);
+end entity sumador1bit;

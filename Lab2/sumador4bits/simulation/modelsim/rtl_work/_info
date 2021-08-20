@@ -1,0 +1,124 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/simulation/modelsim
+Esumador1bit
+Z1 w1629397824
+!i122 0
+R0
+Z2 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd
+Z3 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd
+l0
+L1 1
+V@cZA>d]azT[2@2kj5EE4>1
+!s100 SNN2z9L42zINPIIZU2LP;1
+Z4 OV;C;2020.1;71
+31
+Z5 !s110 1629480362
+!i10b 1
+Z6 !s108 1629480362.000000
+Z7 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd|
+Z8 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd|
+!i113 1
+Z9 o-93 -work work
+Z10 tExplicit 1 CvgOpt 0
+Abehaviour
+Z11 DEx4 work 11 sumador1bit 0 22 @cZA>d]azT[2@2kj5EE4>1
+!i122 0
+l10
+L9 5
+VF]@@NZ_Doiz7gSijTHdlW1
+!s100 b7`z]8b9h;dB=a3TU12c60
+R4
+31
+R5
+!i10b 1
+R6
+R7
+R8
+!i113 1
+R9
+R10
+Esumador4bits
+Z12 w1629415060
+!i122 1
+R0
+Z13 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd
+Z14 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd
+l0
+L1 1
+VZ10U7cV=@:ceSMDeSWh2f3
+!s100 ^:ZW^E;13EJJ2FPBUmGd;1
+R4
+31
+R5
+!i10b 1
+R6
+Z15 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd|
+Z16 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd|
+!i113 1
+R9
+R10
+Abehaviour
+R11
+Z17 DEx4 work 12 sumador4bits 0 22 Z10U7cV=@:ceSMDeSWh2f3
+!i122 1
+l23
+L12 20
+V>7ElRTH<6MN>`JNO>4iQ]0
+!s100 ?Xoi:2kPlm5E[d4AD=TB11
+R4
+31
+R5
+!i10b 1
+R6
+R15
+R16
+!i113 1
+R9
+R10
+Esumador4bits_tb
+Z18 w1629480315
+!i122 2
+R0
+Z19 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd
+Z20 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd
+l0
+L1 1
+VHU^OWo<3:Kn?j_No0gKKD2
+!s100 =We6o0KR_M:`3cDmcC8hK0
+R4
+31
+R5
+!i10b 1
+R6
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
+!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
+!i113 1
+R9
+R10
+Asim
+R17
+DEx4 work 15 sumador4bits_tb 0 22 HU^OWo<3:Kn?j_No0gKKD2
+!i122 2
+l9
+L4 63
+VB>N42;XPcI:K[bG2EjXR50
+!s100 EYEdIMzgVVz[z2=ZfWacK3
+R4
+31
+R5
+!i10b 1
+R6
+R21
+Z22 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
+!i113 1
+R9
+R10

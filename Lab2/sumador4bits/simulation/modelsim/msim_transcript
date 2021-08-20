@@ -1,0 +1,58 @@
+# do sumador4bits_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /opt/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:26:02 on Aug 20,2021
+# vcom -reportprogress 300 -93 -work work /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity sumador1bit
+# -- Compiling architecture behaviour of sumador1bit
+# End time: 11:26:02 on Aug 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:26:02 on Aug 20,2021
+# vcom -reportprogress 300 -93 -work work /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity sumador4bits
+# -- Compiling architecture behaviour of sumador4bits
+# -- Loading entity sumador1bit
+# End time: 11:26:02 on Aug 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:26:02 on Aug 20,2021
+# vcom -reportprogress 300 -93 -work work /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd 
+# -- Loading package STANDARD
+# -- Compiling entity sumador4bits_tb
+# -- Compiling architecture sim of sumador4bits_tb
+# -- Loading entity sumador4bits
+# End time: 11:26:02 on Aug 20,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  sumador4bits_tb
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" sumador4bits_tb 
+# Start time: 11:26:02 on Aug 20,2021
+# Loading std.standard
+# Loading work.sumador4bits_tb(sim)
+# Loading work.sumador4bits(behaviour)
+# Loading work.sumador1bit(behaviour)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 11:28:59 on Aug 20,2021, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 0
