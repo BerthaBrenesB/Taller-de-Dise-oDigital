@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/berta/OneDrive/Documentos/TallerD/simulation/modelsim
+vcounter
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1629600756
+!i10b 1
+!s100 D0Rk^XJ`W]ZWo4O8b?2Lf2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IhK?8z7a`YOlk3`COk:U0B3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1629597565
+8C:/Users/berta/OneDrive/Documentos/TallerD/counter.sv
+FC:/Users/berta/OneDrive/Documentos/TallerD/counter.sv
+!i122 0
+L0 1 22
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1629600756.000000
+!s107 C:/Users/berta/OneDrive/Documentos/TallerD/counter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/TallerD|C:/Users/berta/OneDrive/Documentos/TallerD/counter.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD
+Z7 tCvgOpt 0
+vcounter_tb
+R1
+!s110 1629600757
+!i10b 1
+!s100 ;R<i;HDzacXAmMP>DE3302
+R2
+IHcJ>ddBd>3heaX1<0J@<Q1
+R3
+S1
+R0
+w1629600683
+8C:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv
+FC:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv
+!i122 1
+L0 2 45
+R4
+r1
+!s85 0
+31
+!s108 1629600757.000000
+!s107 C:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/TallerD|C:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv|
+!i113 1
+R5
+R6
+R7

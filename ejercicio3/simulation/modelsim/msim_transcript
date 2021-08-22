@@ -1,0 +1,111 @@
+# Reading pref.tcl
+# do Ejercicio3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD {C:/Users/berta/OneDrive/Documentos/TallerD/counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:52:36 on Aug 21,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD" C:/Users/berta/OneDrive/Documentos/TallerD/counter.sv 
+# -- Compiling module counter
+# 
+# Top level modules:
+# 	counter
+# End time: 20:52:36 on Aug 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD {C:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:52:37 on Aug 21,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD" C:/Users/berta/OneDrive/Documentos/TallerD/counter_tb.sv 
+# -- Compiling module counter_tb
+# 
+# Top level modules:
+# 	counter_tb
+# End time: 20:52:37 on Aug 21,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.counter_tb
+# vsim work.counter_tb 
+# Start time: 20:52:42 on Aug 21,2021
+# Loading sv_std.std
+# Loading work.counter_tb
+# Loading work.counter
+add wave -position end  sim:/counter_tb/rst
+add wave -position end  sim:/counter_tb/data
+add wave -position end  sim:/counter_tb/counter_check
+add wave -position end  sim:/counter_tb/clk
+run
+# Contador inicializado. OK.
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 0
+# counter clk:  0. data: 1
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 1
+# counter clk:  1. data: 0
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 0
+# counter clk:  2. data: 1
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 1
+# counter clk:  3. data: 0
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 0
+# counter clk:  4. data: 1
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 1
+# counter clk:  5. data: 0
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 0
+# counter clk:  6. data: 1
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 1
+# counter clk:  7. data: 0
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 0
+# counter clk:  8. data: 1
+# Iniciando contador. Reloj: 1. Reset: 1
+# Valor del contador: 1
+# counter clk:  9. data: 0
+# Data0
+# Valor del contador: 0
+# Valor del contador: 1
+# counter clk: 10. data: 0
+# Valor del contador: 0
+# counter clk: 11. data: 1
+# Valor del contador: 1
+# counter clk: 12. data: 0
+# Valor del contador: 0
+# counter clk: 13. data: 1
+# Valor del contador: 1
+# counter clk: 14. data: 0
+# Valor del contador: 0
+# counter clk: 15. data: 1
+# Valor del contador: 1
+# counter clk: 16. data: 0
+# Valor del contador: 0
+# counter clk: 17. data: 1
+# Valor del contador: 1
+# counter clk: 18. data: 0
+# Valor del contador: 0
+# counter clk: 19. data: 1
+# Valor del contador: 1
+# counter clk: 20. data: 0
+# Valor del contador: 0
+# counter clk: 21. data: 1
+# Valor del contador: 1
+# counter clk: 22. data: 0
+# Valor del contador: 0
+# counter clk: 23. data: 1
+# Valor del contador: 1
+# counter clk: 24. data: 0
+# 
+# WARNING: No extended dataflow license exists
+# End time: 20:54:31 on Aug 21,2021, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 0
