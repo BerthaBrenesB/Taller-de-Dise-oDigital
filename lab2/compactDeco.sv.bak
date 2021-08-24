@@ -1,0 +1,9 @@
+module compactDeco(input logic A0,A1,A2,A3,
+						output logic a1,b1,c1,d1,e1,f1,g1,a2,b2,c2,d2,e2,f2,g2);
+	
+	logic B0,B1,B2,B3,B4;
+	conversorBinarioBCD moduloBCD(A0,A1,A2,A3,B0,B1,B2,B3,B4);
+	
+	sevenseg modulo1Seg(B4,0,0,0,a1,b1,c1,d1,e1,f1,g1);
+	sevenseg modulo2Seg(B0,B1,B2,B3,a2,b2,c2,d2,e2,f2,g2);
+endmodule;

@@ -1,5 +1,5 @@
-Analysis & Elaboration report for DecoBinarioBCD
-Thu Aug 19 09:52:57 2021
+Analysis & Synthesis report for DecoBinarioBCD
+Thu Aug 19 22:42:41 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,12 +7,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Port Connectivity Checks: "conversorBinarioBCD:modulo"
-  6. Analysis & Elaboration Messages
-  7. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "sevenseg:modulo2Seg"
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,47 +42,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Aug 19 09:52:57 2021       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; DecoBinarioBCD                              ;
-; Top-level Entity Name         ; DecoBinarioBCD_tb                           ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Aug 19 22:42:41 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; DecoBinarioBCD                              ;
+; Top-level Entity Name           ; compactDeco                                 ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 18                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; DecoBinarioBCD_tb  ; DecoBinarioBCD     ;
+; Top-level entity name                                                           ; compactDeco        ; DecoBinarioBCD     ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -157,47 +152,171 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "conversorBinarioBCD:modulo"                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; B0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; B1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; B2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; B3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; B4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+; conversorBinarioBCD.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv ;         ;
+; sevenseg.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/TallerD/lab2/sevenseg.sv            ;         ;
+; compactDeco.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 6        ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 12       ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 0        ;
+;     -- 5 input functions                    ; 0        ;
+;     -- 4 input functions                    ; 9        ;
+;     -- <=3 input functions                  ; 3        ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 18       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; A1~input ;
+; Maximum fan-out                             ; 9        ;
+; Total fan-out                               ; 73       ;
+; Average fan-out                             ; 1.52     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                           ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name         ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------------+--------------+
+; |compactDeco                       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |compactDeco                               ; compactDeco         ; work         ;
+;    |conversorBinarioBCD:moduloBCD| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |compactDeco|conversorBinarioBCD:moduloBCD ; conversorBinarioBCD ; work         ;
+;    |sevenseg:modulo1Seg|           ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |compactDeco|sevenseg:modulo1Seg           ; sevenseg            ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "sevenseg:modulo2Seg" ;
++------------+-------+----------+-----------------+
+; Port       ; Type  ; Severity ; Details         ;
++------------+-------+----------+-----------------+
+; data[3..1] ; Input ; Info     ; Stuck at GND    ;
++------------+-------+----------+-----------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 15                          ;
+;     normal            ; 15                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 9                           ;
+; boundary_port         ; 18                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.05                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Aug 19 09:52:46 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DecoBinarioBCD -c DecoBinarioBCD --analysis_and_elaboration
+    Info: Processing started: Thu Aug 19 22:42:32 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DecoBinarioBCD -c DecoBinarioBCD
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file conversorbinariobcd.sv
     Info (12023): Found entity 1: conversorBinarioBCD File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/conversorBinarioBCD.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decobinariobcd_tb.sv
     Info (12023): Found entity 1: DecoBinarioBCD_tb File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv Line: 1
-Info (12127): Elaborating entity "DecoBinarioBCD_tb" for the top level hierarchy
-Info (10648): Verilog HDL Display System Task info at DecoBinarioBCD_tb.sv(7): Iniciando simulacion File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv Line: 7
-Info (12128): Elaborating entity "conversorBinarioBCD" for hierarchy "conversorBinarioBCD:modulo" File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/DecoBinarioBCD_tb.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sevenseg.sv
+    Info (12023): Found entity 1: sevenseg File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/sevenseg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file compactdeco.sv
+    Info (12023): Found entity 1: compactDeco File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file deco7seg.sv
+    Info (12023): Found entity 1: Deco7seg File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/Deco7seg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file deco7seg_tb.sv
+    Info (12023): Found entity 1: Deco7seg_tb File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/Deco7seg_tb.sv Line: 1
+Info (12127): Elaborating entity "compactDeco" for the top level hierarchy
+Info (12128): Elaborating entity "conversorBinarioBCD" for hierarchy "conversorBinarioBCD:moduloBCD" File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 5
+Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:modulo1Seg" File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "b2" is stuck at GND File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 2
+    Warning (13410): Pin "c2" is stuck at GND File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 2
+    Warning (13410): Pin "g2" is stuck at VCC File: C:/Users/berta/OneDrive/Documentos/TallerD/lab2/compactDeco.sv Line: 2
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/berta/OneDrive/Documentos/TallerD/lab2/output_files/DecoBinarioBCD.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Thu Aug 19 09:52:57 2021
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:29
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 30 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 12 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Thu Aug 19 22:42:41 2021
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/berta/OneDrive/Documentos/TallerD/lab2/output_files/DecoBinarioBCD.map.smsg.
 
 

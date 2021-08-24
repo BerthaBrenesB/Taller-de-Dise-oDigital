@@ -1,7 +1,25 @@
-|DecoBinarioBCD_tb
+|compactDeco
+A0 => A0.IN1
+A1 => A1.IN1
+A2 => A2.IN1
+A3 => A3.IN1
+a1 <= sevenseg:modulo1Seg.port1
+b1 <= sevenseg:modulo1Seg.port1
+c1 <= sevenseg:modulo1Seg.port1
+d1 <= sevenseg:modulo1Seg.port1
+e1 <= sevenseg:modulo1Seg.port1
+f1 <= sevenseg:modulo1Seg.port1
+g1 <= sevenseg:modulo1Seg.port1
+a2 <= sevenseg:modulo2Seg.port1
+b2 <= sevenseg:modulo2Seg.port1
+c2 <= sevenseg:modulo2Seg.port1
+d2 <= sevenseg:modulo2Seg.port1
+e2 <= sevenseg:modulo2Seg.port1
+f2 <= sevenseg:modulo2Seg.port1
+g2 <= sevenseg:modulo2Seg.port1
 
 
-|DecoBinarioBCD_tb|conversorBinarioBCD:modulo
+|compactDeco|conversorBinarioBCD:moduloBCD
 A0 => B0.DATAIN
 A1 => p.IN0
 A1 => f.IN0
@@ -22,5 +40,33 @@ B1 <= B1.DB_MAX_OUTPUT_PORT_TYPE
 B2 <= B2.DB_MAX_OUTPUT_PORT_TYPE
 B3 <= B3.DB_MAX_OUTPUT_PORT_TYPE
 B4 <= B4.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactDeco|sevenseg:modulo1Seg
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+segments[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactDeco|sevenseg:modulo2Seg
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+segments[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
 
 

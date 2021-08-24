@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY DecoBinarioBCD_tb
+set_global_assignment -name TOP_LEVEL_ENTITY compactDeco
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:51:37  AUGUST 17, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -54,6 +54,28 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name SYSTEMVERILOG_FILE conversorBinarioBCD.sv
 set_global_assignment -name SYSTEMVERILOG_FILE DecoBinarioBCD_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sevenseg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE compactDeco.sv
+set_location_assignment PIN_AB12 -to A0
+set_location_assignment PIN_AC12 -to A1
+set_location_assignment PIN_AF9 -to A2
+set_location_assignment PIN_AF10 -to A3
+set_location_assignment PIN_AE26 -to a1
+set_location_assignment PIN_AJ29 -to a2
+set_location_assignment PIN_AE27 -to b1
+set_location_assignment PIN_AH29 -to b2
+set_location_assignment PIN_AE28 -to c1
+set_location_assignment PIN_AH30 -to c2
+set_location_assignment PIN_AG27 -to d1
+set_location_assignment PIN_AG30 -to d2
+set_location_assignment PIN_AF28 -to e1
+set_location_assignment PIN_AF29 -to e2
+set_location_assignment PIN_AG28 -to f1
+set_location_assignment PIN_AF30 -to f2
+set_location_assignment PIN_AH28 -to g1
+set_location_assignment PIN_AD27 -to g2
+set_global_assignment -name SYSTEMVERILOG_FILE Deco7seg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Deco7seg_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

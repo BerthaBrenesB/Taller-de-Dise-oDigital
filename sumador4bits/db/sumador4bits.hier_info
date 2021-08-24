@@ -1,4 +1,30 @@
-|sumador4bits
+|compacto
+A[0] => sumador4bits:sumador.A[0]
+A[1] => sumador4bits:sumador.A[1]
+A[2] => sumador4bits:sumador.A[2]
+A[3] => sumador4bits:sumador.A[3]
+B[0] => sumador4bits:sumador.B[0]
+B[1] => sumador4bits:sumador.B[1]
+B[2] => sumador4bits:sumador.B[2]
+B[3] => sumador4bits:sumador.B[3]
+Cin => sumador4bits:sumador.Cin
+segments1[0] << seven_seg_decoder:deco1.segments[0]
+segments1[1] << seven_seg_decoder:deco1.segments[1]
+segments1[2] << seven_seg_decoder:deco1.segments[2]
+segments1[3] << seven_seg_decoder:deco1.segments[3]
+segments1[4] << seven_seg_decoder:deco1.segments[4]
+segments1[5] << seven_seg_decoder:deco1.segments[5]
+segments1[6] << seven_seg_decoder:deco1.segments[6]
+segments2[0] << seven_seg_decoder:deco2.segments[0]
+segments2[1] << seven_seg_decoder:deco2.segments[1]
+segments2[2] << seven_seg_decoder:deco2.segments[2]
+segments2[3] << seven_seg_decoder:deco2.segments[3]
+segments2[4] << seven_seg_decoder:deco2.segments[4]
+segments2[5] << seven_seg_decoder:deco2.segments[5]
+segments2[6] << seven_seg_decoder:deco2.segments[6]
+
+
+|compacto|sumador4bits:sumador
 A[0] => sumador1bit:S0.A
 A[1] => sumador1bit:S1.A
 A[2] => sumador1bit:S2.A
@@ -8,14 +34,14 @@ B[1] => sumador1bit:S1.B
 B[2] => sumador1bit:S2.B
 B[3] => sumador1bit:S3.B
 Cin => sumador1bit:S0.Cin
-S[0] << sumador1bit:S0.S
-S[1] << sumador1bit:S1.S
-S[2] << sumador1bit:S2.S
-S[3] << sumador1bit:S3.S
-Cout << sumador1bit:S3.Cout
+S[0] <= sumador1bit:S0.S
+S[1] <= sumador1bit:S1.S
+S[2] <= sumador1bit:S2.S
+S[3] <= sumador1bit:S3.S
+Cout <= sumador1bit:S3.Cout
 
 
-|sumador4bits|sumador1bit:S0
+|compacto|sumador4bits:sumador|sumador1bit:S0
 A => S.IN0
 A => Cout.IN1
 B => S.IN1
@@ -28,7 +54,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumador4bits|sumador1bit:S1
+|compacto|sumador4bits:sumador|sumador1bit:S1
 A => S.IN0
 A => Cout.IN1
 B => S.IN1
@@ -41,7 +67,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumador4bits|sumador1bit:S2
+|compacto|sumador4bits:sumador|sumador1bit:S2
 A => S.IN0
 A => Cout.IN1
 B => S.IN1
@@ -54,7 +80,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|sumador4bits|sumador1bit:S3
+|compacto|sumador4bits:sumador|sumador1bit:S3
 A => S.IN0
 A => Cout.IN1
 B => S.IN1
@@ -65,5 +91,81 @@ Cin => Cout.IN1
 Cin => Cout.IN1
 S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compacto|seven_seg_decoder:deco1
+data[0] => Mux0.IN19
+data[0] => Mux1.IN19
+data[0] => Mux2.IN19
+data[0] => Mux3.IN19
+data[0] => Mux4.IN19
+data[0] => Mux5.IN19
+data[0] => Mux6.IN19
+data[1] => Mux0.IN18
+data[1] => Mux1.IN18
+data[1] => Mux2.IN18
+data[1] => Mux3.IN18
+data[1] => Mux4.IN18
+data[1] => Mux5.IN18
+data[1] => Mux6.IN18
+data[2] => Mux0.IN17
+data[2] => Mux1.IN17
+data[2] => Mux2.IN17
+data[2] => Mux3.IN17
+data[2] => Mux4.IN17
+data[2] => Mux5.IN17
+data[2] => Mux6.IN17
+data[3] => Mux0.IN16
+data[3] => Mux1.IN16
+data[3] => Mux2.IN16
+data[3] => Mux3.IN16
+data[3] => Mux4.IN16
+data[3] => Mux5.IN16
+data[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compacto|seven_seg_decoder:deco2
+data[0] => Mux0.IN19
+data[0] => Mux1.IN19
+data[0] => Mux2.IN19
+data[0] => Mux3.IN19
+data[0] => Mux4.IN19
+data[0] => Mux5.IN19
+data[0] => Mux6.IN19
+data[1] => Mux0.IN18
+data[1] => Mux1.IN18
+data[1] => Mux2.IN18
+data[1] => Mux3.IN18
+data[1] => Mux4.IN18
+data[1] => Mux5.IN18
+data[1] => Mux6.IN18
+data[2] => Mux0.IN17
+data[2] => Mux1.IN17
+data[2] => Mux2.IN17
+data[2] => Mux3.IN17
+data[2] => Mux4.IN17
+data[2] => Mux5.IN17
+data[2] => Mux6.IN17
+data[3] => Mux0.IN16
+data[3] => Mux1.IN16
+data[3] => Mux2.IN16
+data[3] => Mux3.IN16
+data[3] => Mux4.IN16
+data[3] => Mux5.IN16
+data[3] => Mux6.IN16
+segments[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
