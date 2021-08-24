@@ -8,117 +8,201 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/simulation/modelsim
+Z0 dC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/simulation/modelsim
+Ecompacto
+Z1 w1629781004
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 3
+R0
+Z4 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/compacto.vhd
+Z5 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/compacto.vhd
+l0
+L2 1
+V>C6ZPABHV3d;WQgEhIl^[0
+!s100 ?L9C0;jj`5VTdVR1EQh_^3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1629819457
+!i10b 1
+Z8 !s108 1629819457.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/compacto.vhd|
+Z10 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/compacto.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehaviour
+Z13 DEx4 work 17 seven_seg_decoder 0 22 i3d93eWLClWNB3[kgfU=i1
+Z14 DEx4 work 12 sumador4bits 0 22 Z10U7cV=@:ceSMDeSWh2f3
+R2
+R3
+DEx4 work 8 compacto 0 22 >C6ZPABHV3d;WQgEhIl^[0
+!i122 3
+l19
+L13 26
+V6Pd]e6@3[MH6i[8O@OhT03
+!s100 @5V89d<X`1^j4]0J0MK0W0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eseven_seg_decoder
+Z15 w1629781829
+R2
+R3
+!i122 2
+R0
+Z16 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/seven_seg_decoder.vhd
+Z17 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/seven_seg_decoder.vhd
+l0
+L2 1
+Vi3d93eWLClWNB3[kgfU=i1
+!s100 Of<abLhiNA3YkRHO3zQ=N1
+R6
+31
+R7
+!i10b 1
+R8
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/seven_seg_decoder.vhd|
+Z19 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/seven_seg_decoder.vhd|
+!i113 1
+R11
+R12
+Asynth
+R2
+R3
+R13
+!i122 2
+l7
+L6 19
+VONXd0<_m=SaiCoG99dc2>2
+!s100 ;>SXY]H`@lFF=X_4WaGM20
+R6
+31
+R7
+!i10b 1
+R8
+R18
+R19
+!i113 1
+R11
+R12
 Esumador1bit
-Z1 w1629397824
+Z20 w1629600995
 !i122 0
 R0
-Z2 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd
-Z3 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd
+Z21 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador1bit.vhd
+Z22 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador1bit.vhd
 l0
 L1 1
 V@cZA>d]azT[2@2kj5EE4>1
 !s100 SNN2z9L42zINPIIZU2LP;1
-Z4 OV;C;2020.1;71
+R6
 31
-Z5 !s110 1629480362
+R7
 !i10b 1
-Z6 !s108 1629480362.000000
-Z7 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd|
-Z8 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador1bit.vhd|
+R8
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador1bit.vhd|
+Z24 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador1bit.vhd|
 !i113 1
-Z9 o-93 -work work
-Z10 tExplicit 1 CvgOpt 0
+R11
+R12
 Abehaviour
-Z11 DEx4 work 11 sumador1bit 0 22 @cZA>d]azT[2@2kj5EE4>1
+Z25 DEx4 work 11 sumador1bit 0 22 @cZA>d]azT[2@2kj5EE4>1
 !i122 0
 l10
 L9 5
 VF]@@NZ_Doiz7gSijTHdlW1
 !s100 b7`z]8b9h;dB=a3TU12c60
-R4
-31
-R5
-!i10b 1
 R6
+31
 R7
+!i10b 1
 R8
+R23
+R24
 !i113 1
-R9
-R10
+R11
+R12
 Esumador4bits
-Z12 w1629415060
+R20
 !i122 1
 R0
-Z13 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd
-Z14 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd
+Z26 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits.vhd
+Z27 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits.vhd
 l0
 L1 1
 VZ10U7cV=@:ceSMDeSWh2f3
 !s100 ^:ZW^E;13EJJ2FPBUmGd;1
-R4
-31
-R5
-!i10b 1
 R6
-Z15 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd|
-Z16 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits.vhd|
+31
+R7
+!i10b 1
+R8
+Z28 !s90 -reportprogress|300|-93|-work|work|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits.vhd|
+Z29 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits.vhd|
 !i113 1
-R9
-R10
-Abehaviour
 R11
-Z17 DEx4 work 12 sumador4bits 0 22 Z10U7cV=@:ceSMDeSWh2f3
+R12
+Abehaviour
+R25
+R14
 !i122 1
 l23
 L12 20
 V>7ElRTH<6MN>`JNO>4iQ]0
 !s100 ?Xoi:2kPlm5E[d4AD=TB11
-R4
-31
-R5
-!i10b 1
 R6
-R15
-R16
+31
+R7
+!i10b 1
+R8
+R28
+R29
 !i113 1
-R9
-R10
+R11
+R12
 Esumador4bits_tb
-Z18 w1629480315
-!i122 2
+R20
+!i122 4
 R0
-Z19 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd
-Z20 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd
+Z30 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits_tb.vhd
+Z31 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits_tb.vhd
 l0
 L1 1
 VHU^OWo<3:Kn?j_No0gKKD2
 !s100 =We6o0KR_M:`3cDmcC8hK0
-R4
-31
-R5
-!i10b 1
 R6
-Z21 !s90 -reportprogress|300|-93|-work|work|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
-!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
+31
+Z32 !s110 1629819458
+!i10b 1
+R8
+Z33 !s90 -reportprogress|300|-93|-work|work|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits_tb.vhd|
+!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits_tb.vhd|
 !i113 1
-R9
-R10
+R11
+R12
 Asim
-R17
+R14
 DEx4 work 15 sumador4bits_tb 0 22 HU^OWo<3:Kn?j_No0gKKD2
-!i122 2
+!i122 4
 l9
 L4 63
 VB>N42;XPcI:K[bG2EjXR50
 !s100 EYEdIMzgVVz[z2=ZfWacK3
-R4
-31
-R5
-!i10b 1
 R6
-R21
-Z22 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab2/sumador4bits/sumador4bits_tb.vhd|
+31
+R32
+!i10b 1
+R8
+R33
+Z34 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/sumador4bits/sumador4bits_tb.vhd|
 !i113 1
-R9
-R10
+R11
+R12
