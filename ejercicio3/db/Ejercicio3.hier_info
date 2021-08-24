@@ -1,9 +1,0 @@
-|counter_tb
-
-
-|counter_tb|counter:C1
-clk => ~NO_FANOUT~
-rst => ~NO_FANOUT~
-countout <= countout.DB_MAX_OUTPUT_PORT_TYPE
-
-

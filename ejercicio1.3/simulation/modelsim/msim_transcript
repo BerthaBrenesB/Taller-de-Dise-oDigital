@@ -1,0 +1,53 @@
+# Reading pref.tcl
+# do contaor_n_bits_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD/experimento3\ -\ backup {C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:17:38 on Aug 23,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup" C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits.sv 
+# -- Compiling module contador_n_bits
+# 
+# Top level modules:
+# 	contador_n_bits
+# End time: 21:17:38 on Aug 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/TallerD/experimento3\ -\ backup {C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 21:17:38 on Aug 23,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup" C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits_tb.sv 
+# -- Compiling module contador_n_bits_tb
+# 
+# Top level modules:
+# 	contador_n_bits_tb
+# End time: 21:17:38 on Aug 23,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.contador_n_bits_tb
+# vsim work.contador_n_bits_tb 
+# Start time: 21:17:41 on Aug 23,2021
+# Loading sv_std.std
+# Loading work.contador_n_bits_tb
+# Loading work.contador_n_bits
+# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (4) for port 'Q'. The port definition is at: C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /contador_n_bits_tb/contador File: C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits_tb.sv Line: 7
+add wave -position end  sim:/contador_n_bits_tb/N
+add wave -position end  sim:/contador_n_bits_tb/clk
+add wave -position end  sim:/contador_n_bits_tb/clr
+add wave -position end  sim:/contador_n_bits_tb/Q
+run
+# Iniiciando la simulacion
+# ** Error: clear failed
+#    Time: 40 ps  Scope: contador_n_bits_tb File: C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits_tb.sv Line: 21
+# ** Error: clock(1) failed
+#    Time: 60 ps  Scope: contador_n_bits_tb File: C:/Users/berta/OneDrive/Documentos/TallerD/experimento3 - backup/contador_n_bits_tb.sv Line: 27
+# End time: 21:19:28 on Aug 23,2021, Elapsed time: 0:01:47
+# Errors: 2, Warnings: 1

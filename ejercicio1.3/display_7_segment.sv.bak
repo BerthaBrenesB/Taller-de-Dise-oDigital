@@ -1,0 +1,148 @@
+module display_7_segment(input logic S[5:0],
+							    output logic A, B, C, D, E, F, G, A_1, B_1, C_1, D_1, E_1, F_1, G_1);
+								 
+	always_comb
+
+		unique case(S)
+		
+			// Case 0
+			6'b000000 : 
+			
+				begin
+				
+					A = 0; B = 0; C = 0; D = 0; E = 0; F = 0; G = 1;
+					A = 0; B = 0; C = 0; D = 0; E = 0; F = 0; G = 1;
+				
+				end
+			
+			// Case 1
+			6'b000001 : 
+			
+				begin
+				
+					A = 1; B = 0; C = 0; D = 1; E = 1; F = 1; G = 1;
+					A = 0; B = 0; C = 0; D = 0; E = 0; F = 0; G = 1;
+				
+				end
+			
+			// Case 2
+			6'b000010 : 
+			
+				begin
+				
+					A = 0; B = 0; C = 1; D = 0; E = 0; F = 1; G = 0;
+				
+				end
+			
+			// Case 3
+			5'b00011 : 
+			
+				begin
+				
+					A = 0;
+					B = 0;
+					C = 0;
+					D = 0;
+					E = 1;
+					F = 1;
+					G = 0;
+				
+				end
+			
+			// Case 4
+			5'b00100 : 
+			
+				begin
+				
+					A = 1;
+					B = 0;
+					C = 0;
+					D = 1;
+					E = 1;
+					F = 0;
+					G = 0;
+				
+				end
+			
+			// Case 5
+			5'b00101 : 
+			
+				begin
+				
+					A = 0;
+					B = 1;
+					C = 0;
+					D = 0;
+					E = 1;
+					F = 0;
+					G = 0;
+				
+				end
+			
+			// Case 6
+			5'b00110 : 
+			
+				begin
+				
+					A = 0;
+					B = 1;
+					C = 0;
+					D = 0;
+					E = 0;
+					F = 0;
+					G = 0;
+				
+				end
+			
+			// Case 7
+			5'b00111 : 
+			
+				begin
+				
+					A = 0;
+					B = 0;
+					C = 0;
+					D = 1;
+					E = 1;
+					F = 1;
+					G = 1;
+				
+				end
+			
+			// Case 8
+			5'b01000 : 
+			
+				begin
+				
+					A = 0;
+					B = 0;
+					C = 0;
+					D = 0;
+					E = 0;
+					F = 0;
+					G = 0;
+				
+				end
+			
+			// Case 9
+			5'b01001 : 
+			
+				begin
+				
+					A = 0;
+					B = 0;
+					C = 0;
+					D = 0;
+					E = 1;
+					F = 0;
+					G = 0;
+				
+				end
+			
+			
+				
+				
+		
+	endcase
+					
+endmodule

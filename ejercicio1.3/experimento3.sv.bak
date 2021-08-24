@@ -1,0 +1,12 @@
+module experimento3 (
+	input logic clk,
+	input logic clr,
+	
+	output logic A, B, C, D, E, F, G, A_1, B_1, C_1, D_1, E_1, F_1, G_1);
+	
+	logic Q[5:0];
+	
+	contador_n_bits(clk, clr, Q[5:0]);
+	display_7_segment(Q[5:0], A, B, C, D, E, F, G, A_1, B_1, C_1, D_1, E_1, F_1, G_1);
+	
+endmodule

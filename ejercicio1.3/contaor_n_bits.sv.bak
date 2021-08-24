@@ -1,0 +1,12 @@
+module contador (
+		parameter N=4)( 			// parámetro N
+		input logic clk, clr,	// clk es señal de reloj y clr señal de clear
+		output logic Q[N-1:0]); // La salida Q es de N bits
+		
+		
+always @(posedge clk or posedge clr)
+	if(clr)Q<=0;	// Si se activa clr el siguiente valor de Q será 0
+	else Q<=Q+1;	// En otro caso se suma 1 al valor obtenido
+	
+endmodule
+		
