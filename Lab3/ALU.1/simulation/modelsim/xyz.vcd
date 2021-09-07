@@ -1,0 +1,118 @@
+$date
+	Mon Sep 06 22:15:18 2021
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module method_sub_tb $end
+$var parameter 32 ! N $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ bin $end
+$var wire 1 % bout $end
+$var wire 1 & d $end
+
+$scope module instantiation $end
+$var parameter 32 ' N $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 * bin $end
+$var wire 1 & d $end
+$var wire 1 % bout $end
+$var wire 1 + q $end
+$var wire 1 , r $end
+$var wire 1 - p $end
+
+$scope module u4 $end
+$var parameter 32 . N $end
+$var wire 1 ( a $end
+$var wire 1 ) b $end
+$var wire 1 - S $end
+$var wire 1 + count $end
+$var wire 1 / x $end
+$upscope $end
+
+$scope module u5 $end
+$var parameter 32 0 N $end
+$var wire 1 - a $end
+$var wire 1 * b $end
+$var wire 1 & S $end
+$var wire 1 , count $end
+$var wire 1 1 x $end
+$upscope $end
+$upscope $end
+$upscope $end
+
+$scope begin std $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+0#
+0$
+b100 !
+b100 '
+b100 .
+b100 0
+0%
+0&
+0+
+0,
+0-
+1/
+11
+0(
+0)
+0*
+$end
+#20
+1#
+1$
+1)
+1*
+1&
+1,
+1-
+1+
+0&
+01
+1%
+0,
+#40
+1"
+0#
+0$
+1(
+0)
+0*
+1&
+0+
+0/
+0%
+#60
+1#
+1$
+1)
+1*
+0&
+0-
+1&
+11
+1,
+1%
+#80
+0"
+0#
+0$
+0(
+0)
+0*
+0&
+0,
+1/
+0%

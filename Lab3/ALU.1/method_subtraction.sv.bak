@@ -1,0 +1,17 @@
+module method_subtraction#(parameter N=4)( a, b, cin, s, cout);
+
+	input logic [N-1:0] a;
+	input logic [N-1:0] b;
+	input logic cin;
+	output logic [N-1:0] s;
+	output logic cout;
+	logic p, g;
+	
+always_comb
+begin
+p = b ^ cin; // b xor Cin
+s = a ^ p ;// a xor p
+g = ~ a
+cout = (g & b) | (g & cin) | (b & cin); 
+end
+endmodule

@@ -1,0 +1,15 @@
+module full_substractor(a,b,bin,d,bout);
+
+	input [N-1:0] a,b;
+	input bin,
+	output[N-1:0] d;
+	output bout;
+	wire q,r;
+	wire [N-1:0] p;
+	
+	half_subtrador u4(a,b,p,q);
+	half_subtrador u5(p,bin,d,r);
+	bout = q | r;
+	
+	
+endmodule

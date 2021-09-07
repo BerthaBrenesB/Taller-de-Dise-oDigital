@@ -1,0 +1,15 @@
+module method_adder_tb #(
+	parameter N=4);
+	logic [N-1:0] A;
+	logic [N-1:0] B;
+	logic [N-1:0] Q;
+	logic cin, cout;
+	
+	initial begin
+	$display("Iniiciando la simulacion");
+	// 9
+	a <= "0000";
+	b <= "0000";
+	#20
+	assert ((S = "0000") and (Cout = '0')) else "test failed for input combination 0000 0000";
+endmodule;

@@ -1,0 +1,33 @@
+# Reading pref.tcl
+# do ALU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1/method_subtraction.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:08:54 on Sep 07,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1/method_subtraction.sv 
+# -- Compiling module method_subtraction
+# 
+# Top level modules:
+# 	method_subtraction
+# End time: 10:08:54 on Sep 07,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1/method_sub_2_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 10:08:54 on Sep 07,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab3/ALU.1/method_sub_2_tb.sv 
+# -- Compiling module method_sub_2_tb
+# 
+# Top level modules:
+# 	method_sub_2_tb
+# End time: 10:08:54 on Sep 07,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

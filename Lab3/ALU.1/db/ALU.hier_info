@@ -1,0 +1,174 @@
+|compactALU
+A[0] => A[0].IN1
+A[1] => A[1].IN1
+A[2] => A[2].IN1
+A[3] => A[3].IN1
+B[0] => B[0].IN1
+B[1] => B[1].IN1
+B[2] => B[2].IN1
+B[3] => B[3].IN1
+select[0] => select[0].IN1
+select[1] => select[1].IN1
+select[2] => select[2].IN1
+cin => cin.IN1
+cout <= method_ALU:alu.port5
+zero <= <VCC>
+carry_flag <= <VCC>
+overflow <= <VCC>
+negative <= <VCC>
+a1 <= sevenseg:modulo1Seg.port1
+b1 <= sevenseg:modulo1Seg.port1
+c1 <= sevenseg:modulo1Seg.port1
+d1 <= sevenseg:modulo1Seg.port1
+e1 <= sevenseg:modulo1Seg.port1
+f1 <= sevenseg:modulo1Seg.port1
+g1 <= sevenseg:modulo1Seg.port1
+
+
+|compactALU|method_ALU:alu
+A[0] => A[0].IN7
+A[1] => A[1].IN7
+A[2] => A[2].IN7
+A[3] => A[3].IN7
+B[0] => B[0].IN5
+B[1] => B[1].IN5
+B[2] => B[2].IN5
+B[3] => B[3].IN5
+select[0] => Equal0.IN31
+select[0] => Equal1.IN0
+select[0] => Equal2.IN31
+select[0] => Equal3.IN1
+select[0] => Equal4.IN31
+select[0] => Equal5.IN1
+select[0] => Equal6.IN31
+select[0] => Equal7.IN2
+select[1] => Equal0.IN30
+select[1] => Equal1.IN31
+select[1] => Equal2.IN0
+select[1] => Equal3.IN0
+select[1] => Equal4.IN30
+select[1] => Equal5.IN31
+select[1] => Equal6.IN1
+select[1] => Equal7.IN1
+select[2] => Equal0.IN29
+select[2] => Equal1.IN30
+select[2] => Equal2.IN30
+select[2] => Equal3.IN31
+select[2] => Equal4.IN0
+select[2] => Equal5.IN0
+select[2] => Equal6.IN0
+select[2] => Equal7.IN0
+cin => cin.IN2
+S[0] <= S[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|method_ALU:alu|method_and:a1
+A[0] => Q.IN0
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+B[0] => Q.IN1
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|method_ALU:alu|method_or:a2
+A[0] => Q.IN0
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+B[0] => Q.IN1
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|method_ALU:alu|method_xor:a3
+A[0] => Q.IN0
+A[1] => ~NO_FANOUT~
+A[2] => ~NO_FANOUT~
+A[3] => ~NO_FANOUT~
+B[0] => Q.IN1
+B[1] => ~NO_FANOUT~
+B[2] => ~NO_FANOUT~
+B[3] => ~NO_FANOUT~
+Q <= Q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|method_ALU:alu|method_adder:a4
+a[0] => _.DATAD
+a[1] => _.DATAD
+a[2] => _.DATAD
+a[3] => _.DATAD
+b[0] => _.DATAC
+b[1] => _.DATAC
+b[2] => _.DATAC
+b[3] => _.DATAC
+cin => _.DATAB
+s[0] <= _.SUM_OUT
+s[1] <= _.SUM_OUT
+s[2] <= _.SUM_OUT
+s[3] <= _.SUM_OUT
+cout <= _.SUM_OUT
+
+
+|compactALU|method_ALU:alu|method_subtraction:a5
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+b[0] => Add0.IN4
+b[1] => Add0.IN3
+b[2] => Add0.IN2
+b[3] => Add0.IN1
+cin => Add1.IN10
+s[0] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|method_ALU:alu|method_right_shift:a6
+A[0] => ~NO_FANOUT~
+A[1] => Q[0].DATAIN
+A[2] => Q[1].DATAIN
+A[3] => Q[2].DATAIN
+Q[0] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= <GND>
+
+
+|compactALU|method_ALU:alu|method_left_shift:a7
+A[0] => Q[1].DATAIN
+A[1] => Q[2].DATAIN
+A[2] => Q[3].DATAIN
+A[3] => ~NO_FANOUT~
+Q[0] <= <GND>
+Q[1] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|compactALU|sevenseg:modulo1Seg
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+segments[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= segments.DB_MAX_OUTPUT_PORT_TYPE
+
+

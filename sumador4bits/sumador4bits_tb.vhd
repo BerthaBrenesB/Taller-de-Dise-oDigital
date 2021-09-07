@@ -8,7 +8,7 @@ architecture sim of sumador4bits_tb is
 
 begin
 	--Instance of 4bit full adder
-	sumador : entity work.sumador4bits(behaviour) port map(
+--	sumador : entity work.sumador4bits(behaviour) port map(
 		A 		=> A,
 		B 		=> B,
 		Cin 	=> Cin,

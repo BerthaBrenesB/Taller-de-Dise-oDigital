@@ -1,0 +1,8 @@
+module half_subtrador(a,b,S,count);
+	input a,b;
+	output S,count;
+	wire x;
+	S = a ^ b;
+	x = ~a;
+	count = x & b
+endmodule
