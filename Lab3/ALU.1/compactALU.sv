@@ -4,7 +4,7 @@ module compactALU#(parameter N=4)(
 	
 	
 	logic [N-1:0] Q;
-	method_ALU alu(A,B, select,cin, Q,cout);
+	method_ALU #(256) alu(A,B, select,cin, Q,cout);
 	logic [6:0] segments1;
 	logic [3:0] entry1;
 	assign a1 = segments1[6];

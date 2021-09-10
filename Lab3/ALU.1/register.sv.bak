@@ -1,0 +1,9 @@
+module register#(parameter N=4)(IN,OUT,CLK);
+	
+	input logic [N-1:0] IN;
+	input logic CLK;
+	output logic [N-1:0] OUT;
+	
+	assign 
+	
+endmodule

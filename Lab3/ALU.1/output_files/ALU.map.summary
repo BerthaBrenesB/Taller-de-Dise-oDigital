@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Sep 07 11:31:18 2021
+Analysis & Synthesis Status : Successful - Thu Sep  9 23:36:14 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : ALU
-Top-level Entity Name : compactALU
+Top-level Entity Name : medicion_frecuencia
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 24
+Total registers : 389
+Total pins : 517
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
