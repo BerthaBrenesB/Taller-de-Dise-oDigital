@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Sep  9 23:36:15 2021
+Mon Sep 13 18:48:52 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,22 +14,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |medicion_frecuencia
- 13. Parameter Settings for User Entity Instance: method_ALU:alu
- 14. Parameter Settings for User Entity Instance: method_ALU:alu|method_and:a1
- 15. Parameter Settings for User Entity Instance: method_ALU:alu|method_or:a2
- 16. Parameter Settings for User Entity Instance: method_ALU:alu|method_xor:a3
- 17. Parameter Settings for User Entity Instance: method_ALU:alu|method_adder:a4
- 18. Parameter Settings for User Entity Instance: method_ALU:alu|method_subtraction:a5
- 19. Parameter Settings for User Entity Instance: method_ALU:alu|method_right_shift:a6
- 20. Parameter Settings for User Entity Instance: method_ALU:alu|method_left_shift:a7
- 21. Port Connectivity Checks: "method_ALU:alu"
- 22. Post-Synthesis Netlist Statistics for Top Partition
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |medicion_frecuencia
+ 11. Parameter Settings for User Entity Instance: method_ALU:alu
+ 12. Parameter Settings for User Entity Instance: method_ALU:alu|method_and:a1
+ 13. Parameter Settings for User Entity Instance: method_ALU:alu|method_or:a2
+ 14. Parameter Settings for User Entity Instance: method_ALU:alu|method_xor:a3
+ 15. Parameter Settings for User Entity Instance: method_ALU:alu|method_adder:a4
+ 16. Parameter Settings for User Entity Instance: method_ALU:alu|method_subtraction:a5
+ 17. Parameter Settings for User Entity Instance: method_ALU:alu|method_right_shift:a6
+ 18. Parameter Settings for User Entity Instance: method_ALU:alu|method_left_shift:a7
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -56,14 +53,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Sep  9 23:36:14 2021       ;
+; Analysis & Synthesis Status     ; Successful - Mon Sep 13 18:48:52 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ALU                                         ;
 ; Top-level Entity Name           ; medicion_frecuencia                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 389                                         ;
-; Total pins                      ; 517                                         ;
+; Total registers                 ; 17                                          ;
+; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -176,9 +173,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processor 3            ;   0.0%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -204,24 +199,24 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 294       ;
+; Estimate of Logic utilization (ALMs needed) ; 14        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 395       ;
-;     -- 7 input functions                    ; 63        ;
-;     -- 6 input functions                    ; 65        ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 2         ;
-;     -- <=3 input functions                  ; 264       ;
+; Combinational ALUT usage for logic          ; 20        ;
+;     -- 7 input functions                    ; 2         ;
+;     -- 6 input functions                    ; 3         ;
+;     -- 5 input functions                    ; 0         ;
+;     -- 4 input functions                    ; 0         ;
+;     -- <=3 input functions                  ; 15        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 389       ;
+; Dedicated logic registers                   ; 17        ;
 ;                                             ;           ;
-; I/O pins                                    ; 517       ;
+; I/O pins                                    ; 18        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 389       ;
-; Total fan-out                               ; 3178      ;
+; Maximum fan-out                             ; 17        ;
+; Total fan-out                               ; 128       ;
 ; Average fan-out                             ; 1.75      ;
 +---------------------------------------------+-----------+
 
@@ -231,10 +226,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Entity Name         ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
-; |medicion_frecuencia          ; 395 (2)             ; 389 (389)                 ; 0                 ; 0          ; 517  ; 0            ; |medicion_frecuencia                                      ; medicion_frecuencia ; work         ;
-;    |method_ALU:alu|           ; 393 (134)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu                       ; method_ALU          ; work         ;
-;       |method_adder:a4|       ; 129 (129)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu|method_adder:a4       ; method_adder        ; work         ;
-;       |method_subtraction:a5| ; 130 (130)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu|method_subtraction:a5 ; method_subtraction  ; work         ;
+; |medicion_frecuencia          ; 20 (0)              ; 17 (17)                   ; 0                 ; 0          ; 18   ; 0            ; |medicion_frecuencia                                      ; medicion_frecuencia ; work         ;
+;    |method_ALU:alu|           ; 20 (9)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu                       ; method_ALU          ; work         ;
+;       |method_adder:a4|       ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu|method_adder:a4       ; method_adder        ; work         ;
+;       |method_subtraction:a5| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |medicion_frecuencia|method_ALU:alu|method_subtraction:a5 ; method_subtraction  ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -250,149 +245,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; R2cout[1]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[2]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[3]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[4]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[5]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[6]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[7]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[8]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[9]~reg0                          ; Stuck at GND due to stuck port data_in ;
-; R2cout[10]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[11]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[12]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[13]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[14]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[15]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[16]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[17]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[18]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[19]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[20]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[21]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[22]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[23]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[24]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[25]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[26]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[27]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[28]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[29]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[30]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[31]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[32]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[33]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[34]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[35]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[36]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[37]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[38]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[39]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[40]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[41]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[42]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[43]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[44]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[45]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[46]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[47]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[48]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[49]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[50]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[51]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[52]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[53]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[54]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[55]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[56]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[57]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[58]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[59]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[60]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[61]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[62]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[63]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[64]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[65]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[66]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[67]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[68]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[69]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[70]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[71]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[72]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[73]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[74]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[75]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[76]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[77]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[78]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[79]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[80]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[81]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[82]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[83]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[84]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[85]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[86]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[87]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[88]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[89]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[90]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[91]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[92]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[93]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[94]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[95]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[96]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[97]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[98]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[99]~reg0                         ; Stuck at GND due to stuck port data_in ;
-; R2cout[100]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[101]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[102]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[103]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[104]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[105]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[106]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[107]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[108]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[109]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[110]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[111]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[112]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[113]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[114]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[115]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[116]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[117]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[118]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[119]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[120]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[121]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[122]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[123]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[124]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[125]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[126]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; R2cout[127]~reg0                        ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 127 ;                                        ;
-+-----------------------------------------+----------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 389   ;
-; Number of registers using Synchronous Clear  ; 124   ;
+; Total registers                              ; 17    ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -401,22 +260,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-; 5:1                ; 61 bits   ; 183 LEs       ; 122 LEs              ; 61 LEs                 ; Yes        ; |medicion_frecuencia|R2Q[50]~reg0 ;
-; 7:1                ; 63 bits   ; 252 LEs       ; 126 LEs              ; 126 LEs                ; Yes        ; |medicion_frecuencia|R2Q[91]~reg0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
-
-
 +-------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: Top-level Entity: |medicion_frecuencia ;
 +----------------+-------+------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                       ;
 +----------------+-------+------------------------------------------------------------+
-; N              ; 128   ; Signed Integer                                             ;
+; N              ; 4     ; Signed Integer                                             ;
 +----------------+-------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -426,7 +275,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+------------------------------------+
 ; Parameter Name ; Value ; Type                               ;
 +----------------+-------+------------------------------------+
-; N              ; 128   ; Signed Integer                     ;
+; N              ; 4     ; Signed Integer                     ;
 +----------------+-------+------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -436,7 +285,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 128   ; Signed Integer                                   ;
+; N              ; 4     ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -446,7 +295,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------+
 ; Parameter Name ; Value ; Type                                            ;
 +----------------+-------+-------------------------------------------------+
-; N              ; 128   ; Signed Integer                                  ;
+; N              ; 4     ; Signed Integer                                  ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -456,7 +305,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------+
 ; Parameter Name ; Value ; Type                                             ;
 +----------------+-------+--------------------------------------------------+
-; N              ; 128   ; Signed Integer                                   ;
+; N              ; 4     ; Signed Integer                                   ;
 +----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -466,7 +315,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------+
 ; Parameter Name ; Value ; Type                                               ;
 +----------------+-------+----------------------------------------------------+
-; N              ; 128   ; Signed Integer                                     ;
+; N              ; 4     ; Signed Integer                                     ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -476,7 +325,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
-; N              ; 128   ; Signed Integer                                           ;
+; N              ; 4     ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -486,7 +335,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                     ;
 +----------------+-------+----------------------------------------------------------+
-; N              ; 128   ; Signed Integer                                           ;
+; N              ; 4     ; Signed Integer                                           ;
 +----------------+-------+----------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -496,19 +345,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                    ;
 +----------------+-------+---------------------------------------------------------+
-; N              ; 128   ; Signed Integer                                          ;
+; N              ; 4     ; Signed Integer                                          ;
 +----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "method_ALU:alu"                                                                                                                                                                       ;
-+--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                                                              ;
-+--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; select ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (3 bits) it drives.  The 125 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; cin    ; Input ; Warning  ; Input port expression (128 bits) is wider than the input port (1 bits) it drives.  The 127 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+--------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -516,30 +355,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 389                         ;
-;     SCLR              ; 124                         ;
-;     plain             ; 265                         ;
-; arriav_lcell_comb     ; 396                         ;
-;     arith             ; 130                         ;
+; arriav_ff             ; 17                          ;
+;     plain             ; 17                          ;
+; arriav_lcell_comb     ; 20                          ;
+;     arith             ; 6                           ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 128                         ;
-;     extend            ; 63                          ;
-;         7 data inputs ; 63                          ;
-;     normal            ; 74                          ;
+;         2 data inputs ; 4                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 7                           ;
+;         3 data inputs ; 4                           ;
+;         6 data inputs ; 3                           ;
+;     shared            ; 5                           ;
 ;         0 data inputs ; 1                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 65                          ;
-;     shared            ; 129                         ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 127                         ;
+;         2 data inputs ; 3                           ;
 ;         3 data inputs ; 1                           ;
-; boundary_port         ; 517                         ;
+; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.90                       ;
-; Average LUT depth     ; 7.71                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.08                        ;
 +-----------------------+-----------------------------+
 
 
@@ -558,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep  9 23:36:06 2021
+    Info: Processing started: Mon Sep 13 18:48:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -599,136 +434,12 @@ Info (10041): Inferred latch for "S[0]" at method_ALU.sv(36) File: /home/igna/Do
 Info (10041): Inferred latch for "S[1]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
 Info (10041): Inferred latch for "S[2]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
 Info (10041): Inferred latch for "S[3]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[4]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[5]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[6]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[7]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[8]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[9]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[10]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[11]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[12]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[13]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[14]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[15]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[16]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[17]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[18]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[19]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[20]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[21]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[22]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[23]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[24]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[25]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[26]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[27]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[28]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[29]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[30]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[31]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[32]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[33]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[34]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[35]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[36]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[37]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[38]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[39]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[40]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[41]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[42]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[43]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[44]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[45]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[46]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[47]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[48]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[49]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[50]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[51]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[52]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[53]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[54]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[55]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[56]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[57]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[58]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[59]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[60]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[61]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[62]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[63]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[64]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[65]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[66]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[67]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[68]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[69]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[70]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[71]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[72]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[73]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[74]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[75]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[76]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[77]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[78]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[79]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[80]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[81]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[82]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[83]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[84]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[85]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[86]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[87]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[88]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[89]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[90]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[91]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[92]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[93]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[94]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[95]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[96]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[97]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[98]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[99]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[100]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[101]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[102]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[103]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[104]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[105]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[106]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[107]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[108]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[109]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[110]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[111]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[112]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[113]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[114]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[115]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[116]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[117]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[118]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[119]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[120]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[121]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[122]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[123]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[124]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[125]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[126]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Info (10041): Inferred latch for "S[127]" at method_ALU.sv(36) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
 Info (12128): Elaborating entity "method_and" for hierarchy "method_ALU:alu|method_and:a1" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at method_and.sv(7): truncated value with size 128 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_and.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at method_and.sv(7): truncated value with size 4 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_and.sv Line: 7
 Info (12128): Elaborating entity "method_or" for hierarchy "method_ALU:alu|method_or:a2" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 14
-Warning (10230): Verilog HDL assignment warning at method_or.sv(7): truncated value with size 128 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_or.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at method_or.sv(7): truncated value with size 4 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_or.sv Line: 7
 Info (12128): Elaborating entity "method_xor" for hierarchy "method_ALU:alu|method_xor:a3" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 15
-Warning (10230): Verilog HDL assignment warning at method_xor.sv(7): truncated value with size 128 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_xor.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at method_xor.sv(7): truncated value with size 4 to match size of target (1) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_xor.sv Line: 7
 Info (12128): Elaborating entity "method_adder" for hierarchy "method_ALU:alu|method_adder:a4" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 16
 Info (12128): Elaborating entity "method_subtraction" for hierarchy "method_ALU:alu|method_subtraction:a5" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 17
 Info (12128): Elaborating entity "method_right_shift" for hierarchy "method_ALU:alu|method_right_shift:a6" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 18
@@ -737,272 +448,19 @@ Warning (14026): LATCH primitive "method_ALU:alu|S[0]" is permanently enabled Fi
 Warning (14026): LATCH primitive "method_ALU:alu|S[1]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
 Warning (14026): LATCH primitive "method_ALU:alu|S[2]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
 Warning (14026): LATCH primitive "method_ALU:alu|S[3]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[4]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[5]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[6]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[7]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[8]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[9]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[10]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[11]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[12]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[13]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[14]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[15]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[16]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[17]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[18]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[19]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[20]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[21]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[22]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[23]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[24]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[25]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[26]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[27]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[28]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[29]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[30]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[31]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[32]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[33]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[34]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[35]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[36]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[37]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[38]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[39]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[40]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[41]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[42]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[43]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[44]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[45]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[46]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[47]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[48]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[49]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[50]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[51]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[52]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[53]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[54]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[55]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[56]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[57]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[58]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[59]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[60]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[61]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[62]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[63]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[64]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[65]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[66]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[67]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[68]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[69]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[70]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[71]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[72]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[73]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[74]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[75]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[76]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[77]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[78]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[79]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[80]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[81]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[82]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[83]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[84]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[85]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[86]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[87]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[88]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[89]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[90]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[91]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[92]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[93]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[94]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[95]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[96]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[97]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[98]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[99]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[100]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[101]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[102]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[103]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[104]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[105]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[106]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[107]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[108]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[109]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[110]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[111]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[112]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[113]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[114]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[115]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[116]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[117]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[118]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[119]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[120]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[121]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[122]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[123]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[124]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[125]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[126]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (14026): LATCH primitive "method_ALU:alu|S[127]" is permanently enabled File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 36
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13012): Latch method_ALU:alu|cout has unsafe behavior File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/method_ALU.sv Line: 3
     Warning (13013): Ports D and ENA on the latch are fed by the same signal R1select[0] File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 17
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "R2cout[1]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[2]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[3]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[4]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[5]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[6]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[7]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[8]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[9]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[10]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[11]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[12]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[13]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[14]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[15]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[16]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[17]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[18]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[19]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[20]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[21]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[22]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[23]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[24]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[25]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[26]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[27]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[28]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[29]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[30]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[31]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[32]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[33]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[34]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[35]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[36]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[37]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[38]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[39]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[40]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[41]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[42]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[43]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[44]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[45]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[46]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[47]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[48]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[49]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[50]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[51]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[52]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[53]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[54]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[55]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[56]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[57]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[58]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[59]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[60]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[61]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[62]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[63]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[64]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[65]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[66]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[67]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[68]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[69]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[70]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[71]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[72]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[73]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[74]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[75]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[76]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[77]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[78]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[79]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[80]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[81]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[82]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[83]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[84]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[85]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[86]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[87]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[88]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[89]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[90]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[91]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[92]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[93]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[94]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[95]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[96]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[97]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[98]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[99]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[100]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[101]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[102]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[103]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[104]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[105]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[106]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[107]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[108]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[109]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[110]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[111]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[112]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[113]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[114]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[115]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[116]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[117]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[118]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[119]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[120]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[121]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[122]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[123]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[124]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[125]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[126]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
-    Warning (13410): Pin "R2cout[127]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab3/ALU.1/medicion_frecuencia.sv Line: 25
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1173 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 261 input pins
-    Info (21059): Implemented 256 output pins
-    Info (21061): Implemented 656 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 265 warnings
-    Info: Peak virtual memory: 478 megabytes
-    Info: Processing ended: Thu Sep  9 23:36:15 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 5 output pins
+    Info (21061): Implemented 33 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 472 megabytes
+    Info: Processing ended: Mon Sep 13 18:48:52 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

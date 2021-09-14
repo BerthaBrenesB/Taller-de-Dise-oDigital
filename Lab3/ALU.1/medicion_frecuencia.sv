@@ -1,13 +1,13 @@
 module medicion_frecuencia#(parameter N=128)(input CLK,
 	input [N-1:0] A,input [N-1:0] B,input [2:0] select,input cin, 
-	output reg [N-1:0] R2cout,
+	output reg R2cout,
 	output reg [N-1:0] R2Q);
 	
 	
 	reg [N-1:0] R1A;
 	reg [N-1:0] R1B;
-	reg [N-1:0] R1select;
-	reg [N-1:0] R1cin;
+	reg [2:0] R1select;
+	reg R1cin;
 	
 	wire [N-1:0] Q;
 	wire cout;
