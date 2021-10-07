@@ -1,0 +1,118 @@
+# Reading pref.tcl
+# do TareFSM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Comparator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:06 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Comparator.sv 
+# -- Compiling module Comparator
+# 
+# Top level modules:
+# 	Comparator
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Counter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Counter.sv 
+# -- Compiling module Counter
+# 
+# Top level modules:
+# 	Counter
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/FSM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/FSM.sv 
+# -- Compiling module FSM
+# 
+# Top level modules:
+# 	FSM
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/mantenimiento.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/mantenimiento.sv 
+# -- Compiling module mantenimiento
+# 
+# Top level modules:
+# 	mantenimiento
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Mux_2_to_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/Register.sv 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/mantenimiento_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:27:07 on Sep 29,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/TareaBertha/mantenimiento_tb.sv 
+# -- Compiling module mantenimiento_tb
+# 
+# Top level modules:
+# 	mantenimiento_tb
+# End time: 09:27:07 on Sep 29,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.mantenimiento_tb
+# vsim work.mantenimiento_tb 
+# Start time: 09:28:11 on Sep 29,2021
+# Loading sv_std.std
+# Loading work.mantenimiento_tb
+# Loading work.mantenimiento
+# Loading work.FSM
+# Loading work.Counter
+# Loading work.Mux_2_to_1
+# Loading work.Register
+# Loading work.Comparator
+vsim work.mantenimiento_tb
+# End time: 09:28:15 on Sep 29,2021, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# vsim work.mantenimiento_tb 
+# Start time: 09:28:15 on Sep 29,2021
+# Loading sv_std.std
+# Loading work.mantenimiento_tb
+# Loading work.mantenimiento
+# Loading work.FSM
+# Loading work.Counter
+# Loading work.Mux_2_to_1
+# Loading work.Register
+# Loading work.Comparator
+add wave -position end  sim:/mantenimiento_tb/clk
+add wave -position end  sim:/mantenimiento_tb/M
+add wave -position end  sim:/mantenimiento_tb/reset
+add wave -position end  sim:/mantenimiento_tb/status
+RUN
+# invalid command name "RUN"
+Run
+# invalid command name "Run"
+run
+# End time: 09:29:36 on Sep 29,2021, Elapsed time: 0:01:21
+# Errors: 0, Warnings: 0
