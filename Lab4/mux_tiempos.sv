@@ -1,5 +1,5 @@
-module mux_tiempos(input logic [2:0] sel
-						output logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar)
+module mux_tiempos(input logic [2:0] sel,
+						output logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar);
 
 
 always_comb

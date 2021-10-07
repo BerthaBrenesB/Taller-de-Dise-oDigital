@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Wed Oct  6 00:26:33 2021
+Wed Oct  6 21:28:44 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,14 +14,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |method_addersub
- 10. Parameter Settings for User Entity Instance: method_adder:sumador
- 11. Parameter Settings for User Entity Instance: method_substractor:restador
- 12. Port Connectivity Checks: "method_substractor:restador"
- 13. Port Connectivity Checks: "method_adder:sumador"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: slow_counter:counter_segundos
+ 10. Port Connectivity Checks: "FSM_Preparadora:preparadora"
+ 11. Port Connectivity Checks: "slow_counter:counter_segundos"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -48,14 +46,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct  6 00:26:33 2021       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct  6 21:28:44 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; FSM                                         ;
-; Top-level Entity Name           ; method_addersub                             ;
+; Top-level Entity Name           ; control                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 15                                          ;
+; Total registers                 ; 2                                           ;
+; Total pins                      ; 10                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -74,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; method_addersub    ; FSM                ;
+; Top-level entity name                                                           ; control            ; FSM                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -164,60 +162,62 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; method_adder.sv                  ; yes             ; User SystemVerilog HDL File  ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_adder.sv       ;         ;
-; method_substractor.sv            ; yes             ; User SystemVerilog HDL File  ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv ;         ;
-; method_addersub.sv               ; yes             ; User SystemVerilog HDL File  ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; mux_tiempos.sv                   ; yes             ; User SystemVerilog HDL File        ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv     ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File        ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv         ;         ;
+; slow_counter.sv                  ; yes             ; User SystemVerilog HDL File        ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv    ;         ;
+; FSM_Preparadora.sv               ; yes             ; Auto-Found SystemVerilog HDL File  ; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                      ;
-+---------------------------------------------+------------------------------------+
-; Resource                                    ; Usage                              ;
-+---------------------------------------------+------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 7                                  ;
-;                                             ;                                    ;
-; Combinational ALUT usage for logic          ; 13                                 ;
-;     -- 7 input functions                    ; 0                                  ;
-;     -- 6 input functions                    ; 0                                  ;
-;     -- 5 input functions                    ; 0                                  ;
-;     -- 4 input functions                    ; 0                                  ;
-;     -- <=3 input functions                  ; 13                                 ;
-;                                             ;                                    ;
-; Dedicated logic registers                   ; 0                                  ;
-;                                             ;                                    ;
-; I/O pins                                    ; 15                                 ;
-;                                             ;                                    ;
-; Total DSP Blocks                            ; 0                                  ;
-;                                             ;                                    ;
-; Maximum fan-out node                        ; method_substractor:restador|Add0~1 ;
-; Maximum fan-out                             ; 2                                  ;
-; Total fan-out                               ; 50                                 ;
-; Average fan-out                             ; 1.16                               ;
-+---------------------------------------------+------------------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                        ;
++---------------------------------------------+--------------------------------------+
+; Resource                                    ; Usage                                ;
++---------------------------------------------+--------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 3                                    ;
+;                                             ;                                      ;
+; Combinational ALUT usage for logic          ; 5                                    ;
+;     -- 7 input functions                    ; 0                                    ;
+;     -- 6 input functions                    ; 0                                    ;
+;     -- 5 input functions                    ; 2                                    ;
+;     -- 4 input functions                    ; 0                                    ;
+;     -- <=3 input functions                  ; 3                                    ;
+;                                             ;                                      ;
+; Dedicated logic registers                   ; 2                                    ;
+;                                             ;                                      ;
+; I/O pins                                    ; 10                                   ;
+;                                             ;                                      ;
+; Total DSP Blocks                            ; 0                                    ;
+;                                             ;                                      ;
+; Maximum fan-out node                        ; FSM_Preparadora:preparadora|state[1] ;
+; Maximum fan-out                             ; 5                                    ;
+; Total fan-out                               ; 35                                   ;
+; Average fan-out                             ; 1.30                                 ;
++---------------------------------------------+--------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                          ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name        ; Library Name ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
-; |method_addersub                 ; 13 (2)              ; 0 (0)                     ; 0                 ; 0          ; 15   ; 0            ; |method_addersub                             ; method_addersub    ; work         ;
-;    |method_adder:sumador|        ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |method_addersub|method_adder:sumador        ; method_adder       ; work         ;
-;    |method_substractor:restador| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |method_addersub|method_substractor:restador ; method_substractor ; work         ;
-+----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------+--------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name     ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
+; |control                         ; 5 (0)               ; 2 (0)                     ; 0                 ; 0          ; 10   ; 0            ; |control                             ; control         ; work         ;
+;    |FSM_Preparadora:preparadora| ; 5 (5)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |control|FSM_Preparadora:preparadora ; FSM_Preparadora ; work         ;
++----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -226,62 +226,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 2     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 2     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |method_addersub ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: slow_counter:counter_segundos ;
++-----------------+-------+--------------------------------------------------+
+; Parameter Name  ; Value ; Type                                             ;
++-----------------+-------+--------------------------------------------------+
+; clk_half_period ; 10    ; Signed Integer                                   ;
+; N               ; 2     ; Signed Integer                                   ;
++-----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: method_adder:sumador ;
-+----------------+-------+------------------------------------------+
-; Parameter Name ; Value ; Type                                     ;
-+----------------+-------+------------------------------------------+
-; N              ; 4     ; Signed Integer                           ;
-+----------------+-------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM_Preparadora:preparadora"                                                                                                                        ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; segundos ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "segundos[2..1]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: method_substractor:restador ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 4     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "method_substractor:restador"                                                                                         ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; s    ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "s[3..1]" have no fanouts ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "method_adder:sumador"                                                                                                ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                              ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
-; s    ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "s[3..1]" have no fanouts ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "slow_counter:counter_segundos"                                                                           ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -289,22 +270,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 14                          ;
-;     arith             ; 6                           ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;     normal            ; 3                           ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;     shared            ; 5                           ;
+; arriav_ff             ; 2                           ;
+;     CLR               ; 2                           ;
+; arriav_lcell_comb     ; 6                           ;
+;     normal            ; 6                           ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-; boundary_port         ; 15                          ;
+;         5 data inputs ; 2                           ;
+; boundary_port         ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 2.21                        ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -323,7 +299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct  6 00:26:25 2021
+    Info: Processing started: Wed Oct  6 21:28:37 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -333,27 +309,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file method_
     Info (12023): Found entity 1: method_substractor File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file method_addersub.sv
     Info (12023): Found entity 1: method_addersub File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 1
-Info (12127): Elaborating entity "method_addersub" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at method_addersub.sv(14): inferring latch(es) for variable "S", which holds its previous value in one or more paths through the always construct File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 14
-Warning (10240): Verilog HDL Always Construct warning at method_addersub.sv(14): inferring latch(es) for variable "cout", which holds its previous value in one or more paths through the always construct File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 14
-Info (12128): Elaborating entity "method_adder" for hierarchy "method_adder:sumador" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 9
-Info (12128): Elaborating entity "method_substractor" for hierarchy "method_substractor:restador" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file mux_tiempos.sv
+    Info (12023): Found entity 1: mux_tiempos File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file control.sv
+    Info (12023): Found entity 1: control File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file slow_counter.sv
+    Info (12023): Found entity 1: slow_counter File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 1
+Info (12127): Elaborating entity "control" for the top level hierarchy
+Info (12128): Elaborating entity "mux_tiempos" for hierarchy "mux_tiempos:mux_t" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 14
+Info (12128): Elaborating entity "slow_counter" for hierarchy "slow_counter:counter_segundos" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 15
+Warning (10230): Verilog HDL assignment warning at slow_counter.sv(12): truncated value with size 32 to match size of target (26) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 12
+Warning (12125): Using design file FSM_Preparadora.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FSM_Preparadora File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 1
+Info (12128): Elaborating entity "FSM_Preparadora" for hierarchy "FSM_Preparadora:preparadora" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(12): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 12
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(19): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 19
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(20): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 20
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(21): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 21
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(22): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 22
+Warning (10199): Verilog HDL Case Statement warning at FSM_Preparadora.sv(23): case item expression never matches the case expression File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 23
+Warning (10199): Verilog HDL Case Statement warning at FSM_Preparadora.sv(24): case item expression never matches the case expression File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 24
+Warning (10230): Verilog HDL assignment warning at FSM_Preparadora.sv(25): truncated value with size 3 to match size of target (2) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 25
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "S[1]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 3
-    Warning (13410): Pin "S[2]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 3
-    Warning (13410): Pin "S[3]" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 3
+    Warning (13410): Pin "chocolate" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 3
+    Warning (13410): Pin "azucar" is stuck at GND File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 3
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
+Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 459 megabytes
-    Info: Processing ended: Wed Oct  6 00:26:33 2021
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 5 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 15 warnings
+    Info: Peak virtual memory: 487 megabytes
+    Info: Processing ended: Wed Oct  6 21:28:44 2021
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:18
 
 

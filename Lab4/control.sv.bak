@@ -1,0 +1,5 @@
+module control(input logic clk, rst,
+					output logic agua, cafe, leche, chocolate, azucar) // estas señales van a las "electroválvulas" (los leds en la fpga)
+
+//hay que agregar los inputs de los botones (monedas / selección) y el output de la cantidad de dinero 
+endmodule

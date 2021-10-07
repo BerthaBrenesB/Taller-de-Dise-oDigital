@@ -2,7 +2,7 @@ module FSM_Preparadora(input logic [2:0] sel,
 											input logic clk, rst,
 											input logic [2:0] segundos,
 											input logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar,
-											output logic agua, cafe, leche, chocolate, azucar, rst_seconds, finish);
+											output logic agua, cafe, leche, chocolate, azucar, rst_segundos, finish);
 					
 	
 logic [1:0] state, next_state;
@@ -33,7 +33,7 @@ assign leche 		= (state == 3'b011);
 assign chocolate 	= (state == 3'b100);
 assign azucar 		= (state == 3'b101);
 
-assign rst_seconds = ~(state == next_state); // resetear counter de segundos cuando se cambia de estado
+assign rst_segundos = ~(state == next_state); // resetear counter de segundos cuando se cambia de estado
 assign finish = (next_state == 3'b000) & (state == 3'b000); // está en estado de conclusión 
 
 endmodule

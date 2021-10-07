@@ -4,51 +4,35 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "S[0]",
+					"name" : "agua",
 					"strict" : false
 				},
 				{
-					"name" : "cout",
+					"name" : "cafe",
 					"strict" : false
 				},
 				{
-					"name" : "select",
+					"name" : "leche",
 					"strict" : false
 				},
 				{
-					"name" : "B[0]",
+					"name" : "seleccion[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "seleccion[0]",
 					"strict" : false
 				},
 				{
-					"name" : "cin",
+					"name" : "seleccion[1]",
 					"strict" : false
 				},
 				{
-					"name" : "B[3]",
+					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
-					"strict" : false
-				},
-				{
-					"name" : "B[2]",
-					"strict" : false
-				},
-				{
-					"name" : "A[2]",
-					"strict" : false
-				},
-				{
-					"name" : "B[1]",
-					"strict" : false
-				},
-				{
-					"name" : "A[1]",
+					"name" : "rst",
 					"strict" : false
 				}
 			]
