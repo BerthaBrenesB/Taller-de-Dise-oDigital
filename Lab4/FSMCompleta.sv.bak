@@ -1,0 +1,14 @@
+module FSMCompleta(input logic clk, rst,x,y,b,to,
+							output logic a,b,c);
+							
+endmodule
+
+logic [1:0] state, next_state;
+
+// estado actual
+always_ff @(posedge clk or posedge rst)
+	if(rst) state = 3'b000;
+	else
+		state = next_state;
+
+// siguiente estado
