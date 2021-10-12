@@ -12,28 +12,28 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:07:38 on Oct 11,2021
+# Start time: 08:33:44 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv 
 # -- Compiling module FSMCompleta
 # 
 # Top level modules:
 # 	FSMCompleta
-# End time: 20:07:38 on Oct 11,2021, Elapsed time: 0:00:00
+# End time: 08:33:45 on Oct 12,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 20:07:38 on Oct 11,2021
+# Start time: 08:33:45 on Oct 12,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4" C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv 
 # -- Compiling module FSMCompleta_tb
 # 
 # Top level modules:
 # 	FSMCompleta_tb
-# End time: 20:07:38 on Oct 11,2021, Elapsed time: 0:00:00
+# End time: 08:33:45 on Oct 12,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.FSMCompleta_tb
 # vsim work.FSMCompleta_tb 
-# Start time: 20:22:40 on Oct 11,2021
+# Start time: 08:33:49 on Oct 12,2021
 # Loading sv_std.std
 # Loading work.FSMCompleta_tb
 # Loading work.FSMCompleta
@@ -45,6 +45,6 @@ add wave -position end  sim:/FSMCompleta_tb/sum
 add wave -position end  sim:/FSMCompleta_tb/to
 add wave -position end  sim:/FSMCompleta_tb/x
 add wave -position end  sim:/FSMCompleta_tb/y
-run 100
-# End time: 20:23:49 on Oct 11,2021, Elapsed time: 0:01:09
+run 200
+# End time: 08:35:24 on Oct 12,2021, Elapsed time: 0:01:35
 # Errors: 0, Warnings: 0

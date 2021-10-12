@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/simulation/modelsim
 vFSMCompleta
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634004458
+Z2 !s110 1634049225
 !i10b 1
 !s100 eD0Y?e2EO9?5gB^GlDRFj1
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,13 +28,13 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1634004458.000000
+!s108 1634049224.000000
 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4
-Z9 tCvgOpt 0
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4
+Z8 tCvgOpt 0
 n@f@s@m@completa
 vFSMCompleta_tb
 R1
@@ -55,11 +55,11 @@ R5
 r1
 !s85 0
 31
-R6
+!s108 1634049225.000000
 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@f@s@m@completa_tb

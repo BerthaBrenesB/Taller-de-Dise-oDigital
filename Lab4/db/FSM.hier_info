@@ -1,7 +1,21 @@
-|FSMCompleta_tb
+|lab_compact
+clk => clk.IN3
+rst => rst.IN3
+M1 => M1.IN1
+M2 => M2.IN1
+sel[0] => sel[0].IN2
+sel[1] => sel[1].IN2
+sel[2] => sel[2].IN2
+agua <= <GND>
+cafe <= <GND>
+leche <= <GND>
+chocolate <= <GND>
+azucar <= <GND>
+rst_segundos <= <GND>
+finish <= <GND>
 
 
-|FSMCompleta_tb|FSMCompleta:machine
+|lab_compact|FSMCompleta:machine
 clk => state~1.DATAIN
 rst => state~3.DATAIN
 m1 => always1.IN0
@@ -21,5 +35,28 @@ boison[1] <= Sel[1].DB_MAX_OUTPUT_PORT_TYPE
 boison[2] <= Sel[2].DB_MAX_OUTPUT_PORT_TYPE
 sum[0] <= m1.DB_MAX_OUTPUT_PORT_TYPE
 sum[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|Counter_coins:contador
+clk => ~NO_FANOUT~
+rst => ~NO_FANOUT~
+cien => ~NO_FANOUT~
+quinientos => ~NO_FANOUT~
+Q <= <GND>
+
+
+|lab_compact|Register:registro
+clk => Q~reg0.CLK
+rst => Q~reg0.ACLR
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|Comparator_coins:comparador
+Reg => ~NO_FANOUT~
+sel[0] => ~NO_FANOUT~
+sel[1] => ~NO_FANOUT~
+sel[2] => ~NO_FANOUT~
+equal <= <GND>
 
 

@@ -1,0 +1,5 @@
+module lab_compact(input logic clk, rst,M1,M2,
+						 input logic [2:0] sel,
+						 output logic agua, cafe, leche, chocolate, azucar, rst_segundos, finish);
+
+endmodule
