@@ -1,17 +1,25 @@
-|FSMCompleta
-clk => state[0].CLK
-clk => state[1].CLK
-rst => state[0].ACLR
-rst => state[1].ACLR
-x => next_state.OUTPUTSELECT
-x => next_state.OUTPUTSELECT
-y => next_state.OUTPUTSELECT
-y => next_state.OUTPUTSELECT
-b => next_state.DATAA
-b => next_state.DATAA
-to => ~NO_FANOUT~
-a <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-d <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
-c <= <GND>
+|FSMCompleta_tb
+
+
+|FSMCompleta_tb|FSMCompleta:machine
+clk => state~1.DATAIN
+rst => state~3.DATAIN
+m1 => always1.IN0
+m1 => sum[0].DATAIN
+m2 => always1.IN1
+m2 => sum[1].DATAIN
+Rc => next_state.11.DATAB
+Rc => Selector0.IN3
+Sel[0] => WideOr0.IN0
+Sel[0] => boison[0].DATAIN
+Sel[1] => WideOr0.IN1
+Sel[1] => boison[1].DATAIN
+Sel[2] => WideOr0.IN2
+Sel[2] => boison[2].DATAIN
+boison[0] <= Sel[0].DB_MAX_OUTPUT_PORT_TYPE
+boison[1] <= Sel[1].DB_MAX_OUTPUT_PORT_TYPE
+boison[2] <= Sel[2].DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= m1.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
 
 

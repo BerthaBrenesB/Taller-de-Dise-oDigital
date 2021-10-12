@@ -1,0 +1,7 @@
+module FSMCompleta_tb(input logic clk,rst,m1,m2,Rc,
+						 input logic [2:0]Sel,
+						 output logic sum,boison);
+						 
+						 
+						 
+endmodule

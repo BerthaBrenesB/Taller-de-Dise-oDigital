@@ -1,5 +1,5 @@
 Analysis & Elaboration report for FSM
-Thu Oct 07 21:15:32 2021
+Mon Oct 11 20:07:14 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,8 +10,9 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
   4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
-  6. Analysis & Elaboration Suppressed Messages
+  5. Port Connectivity Checks: "FSMCompleta:machine"
+  6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -38,10 +39,10 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Oct 07 21:15:32 2021       ;
+; Analysis & Elaboration Status ; Successful - Mon Oct 11 20:07:14 2021       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; FSM                                         ;
-; Top-level Entity Name         ; FSMCompleta                                 ;
+; Top-level Entity Name         ; FSMCompleta_tb                              ;
 ; Family                        ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
 ; Total registers               ; N/A until Partition Merge                   ;
@@ -75,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; FSMCompleta        ; FSM                ;
+; Top-level entity name                                                           ; FSMCompleta_tb     ; FSM                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -156,13 +157,23 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSMCompleta:machine"                                                                  ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; boison ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sum    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 07 21:15:22 2021
+    Info: Processing started: Mon Oct 11 20:07:06 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -180,20 +191,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file slow_co
     Info (12023): Found entity 1: slow_counter File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsmcompleta.sv
     Info (12023): Found entity 1: FSMCompleta File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 1
-Info (12127): Elaborating entity "FSMCompleta" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(9): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 9
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(16): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(17): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(18): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(19): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 19
-Warning (10199): Verilog HDL Case Statement warning at FSMCompleta.sv(20): case item expression never matches the case expression File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 20
-Warning (10230): Verilog HDL assignment warning at FSMCompleta.sv(21): truncated value with size 3 to match size of target (2) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file fsmcompleta_tb.sv
+    Info (12023): Found entity 1: FSMCompleta_tb File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 1
+Info (12127): Elaborating entity "FSMCompleta_tb" for the top level hierarchy
+Warning (10755): Verilog HDL warning at FSMCompleta_tb.sv(10): assignments to clk create a combinational loop File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 10
+Info (12128): Elaborating entity "FSMCompleta" for hierarchy "FSMCompleta:machine" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 7
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 2
 Info (144001): Generated suppressed messages file C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/output_files/FSM.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Thu Oct 07 21:15:32 2021
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Processing ended: Mon Oct 11 20:07:14 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 
 +--------------------------------------------+
