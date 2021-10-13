@@ -22,10 +22,12 @@ module FSMCompleta_tb();
 		
 		reset = 0;
 		x = 1;
+		y = 0;
 		
 		#10
 		
 		y = 1;
+		x = 0;
 		
 		#10
 		
@@ -37,9 +39,7 @@ module FSMCompleta_tb();
 		
 		#20
 		to = 1;
-		#10
 		
-		reset = 1;
 		
 		#10
 		

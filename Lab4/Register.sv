@@ -1,6 +1,6 @@
 module Register(input clk, rst,
-					 input D,
-					 output logic Q);
+					 input logic [3:0]D,
+					 output logic  [3:0]Q);
 												
 always_ff @ (negedge clk or posedge rst)
 	if (rst) Q = 0;
