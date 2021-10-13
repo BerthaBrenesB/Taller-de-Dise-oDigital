@@ -25,6 +25,6 @@ always_comb
 // outputs
 assign sum[0] = m1;
 assign sum[1] = m2;
-assign boison = Sel;
+assign boison = (state == 2'b11 ? Sel : 2'b00);
 
 endmodule

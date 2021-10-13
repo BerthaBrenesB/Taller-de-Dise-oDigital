@@ -1,0 +1,5 @@
+module lab_compac_tb();
+
+	logic clk, reset,M1,M2;
+	
+endmodule

@@ -1,21 +1,23 @@
-|lab_compact
-clk => clk.IN3
-rst => rst.IN3
+|lab_compac_tb
+
+
+|lab_compac_tb|lab_compact:machine
+clk => clk.IN4
+rst => rst.IN4
 M1 => M1.IN1
 M2 => M2.IN1
 sel[0] => sel[0].IN2
 sel[1] => sel[1].IN2
 sel[2] => sel[2].IN2
-agua <= <GND>
-cafe <= <GND>
-leche <= <GND>
-chocolate <= <GND>
-azucar <= <GND>
-rst_segundos <= <GND>
-finish <= <GND>
+agua <= control:preparacion.port3
+cafe <= control:preparacion.port4
+leche <= control:preparacion.port5
+chocolate <= control:preparacion.port6
+azucar <= control:preparacion.port7
+vuelto <= Comparator_coins:comparador.port3
 
 
-|lab_compact|FSMCompleta:machine
+|lab_compac_tb|lab_compact:machine|FSMCompleta:machine
 clk => state~1.DATAIN
 rst => state~3.DATAIN
 m1 => always1.IN0
@@ -25,38 +27,167 @@ m2 => sum[1].DATAIN
 Rc => next_state.11.DATAB
 Rc => Selector0.IN3
 Sel[0] => WideOr0.IN0
-Sel[0] => boison[0].DATAIN
+Sel[0] => boison.DATAB
 Sel[1] => WideOr0.IN1
-Sel[1] => boison[1].DATAIN
+Sel[1] => boison.DATAB
 Sel[2] => WideOr0.IN2
-Sel[2] => boison[2].DATAIN
-boison[0] <= Sel[0].DB_MAX_OUTPUT_PORT_TYPE
-boison[1] <= Sel[1].DB_MAX_OUTPUT_PORT_TYPE
-boison[2] <= Sel[2].DB_MAX_OUTPUT_PORT_TYPE
+Sel[2] => boison.DATAB
+boison[0] <= boison.DB_MAX_OUTPUT_PORT_TYPE
+boison[1] <= boison.DB_MAX_OUTPUT_PORT_TYPE
+boison[2] <= boison.DB_MAX_OUTPUT_PORT_TYPE
 sum[0] <= m1.DB_MAX_OUTPUT_PORT_TYPE
 sum[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Counter_coins:contador
+|lab_compac_tb|lab_compact:machine|Counter_coins:contador
 clk => ~NO_FANOUT~
 rst => ~NO_FANOUT~
-cien => ~NO_FANOUT~
-quinientos => ~NO_FANOUT~
+M[0] => ~NO_FANOUT~
+M[1] => ~NO_FANOUT~
 Q <= <GND>
 
 
-|lab_compact|Register:registro
+|lab_compac_tb|lab_compact:machine|Register:registro
 clk => Q~reg0.CLK
 rst => Q~reg0.ACLR
 D => Q~reg0.DATAIN
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Comparator_coins:comparador
+|lab_compac_tb|lab_compact:machine|Comparator_coins:comparador
 Reg => ~NO_FANOUT~
 sel[0] => ~NO_FANOUT~
 sel[1] => ~NO_FANOUT~
 sel[2] => ~NO_FANOUT~
 equal <= <GND>
+vuelto <= <GND>
+
+
+|lab_compac_tb|lab_compact:machine|control:preparacion
+clk => clk.IN2
+rst => rst.IN1
+seleccion[0] => seleccion[0].IN2
+seleccion[1] => seleccion[1].IN2
+seleccion[2] => seleccion[2].IN2
+agua <= FSM_Preparadora:preparadora.port9
+cafe <= FSM_Preparadora:preparadora.port10
+leche <= FSM_Preparadora:preparadora.port11
+chocolate <= FSM_Preparadora:preparadora.port12
+azucar <= FSM_Preparadora:preparadora.port13
+
+
+|lab_compac_tb|lab_compact:machine|control:preparacion|mux_tiempos:mux_t
+sel[0] => Decoder0.IN2
+sel[1] => Decoder0.IN1
+sel[2] => Decoder0.IN0
+t_agua[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+t_agua[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+t_cafe[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+t_cafe[1] <= t_cafe.DB_MAX_OUTPUT_PORT_TYPE
+t_leche[0] <= t_leche.DB_MAX_OUTPUT_PORT_TYPE
+t_leche[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+t_chocolate[0] <= <GND>
+t_chocolate[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+t_azucar[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+t_azucar[1] <= <GND>
+
+
+|lab_compac_tb|lab_compact:machine|control:preparacion|slow_counter:counter_segundos
+clk => accum[0].CLK
+clk => accum[1].CLK
+clk => accum[2].CLK
+clk => accum[3].CLK
+clk => accum[4].CLK
+clk => accum[5].CLK
+clk => accum[6].CLK
+clk => accum[7].CLK
+clk => accum[8].CLK
+clk => accum[9].CLK
+clk => accum[10].CLK
+clk => accum[11].CLK
+clk => accum[12].CLK
+clk => accum[13].CLK
+clk => accum[14].CLK
+clk => accum[15].CLK
+clk => accum[16].CLK
+clk => accum[17].CLK
+clk => accum[18].CLK
+clk => accum[19].CLK
+clk => accum[20].CLK
+clk => accum[21].CLK
+clk => accum[22].CLK
+clk => accum[23].CLK
+clk => accum[24].CLK
+clk => accum[25].CLK
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+rst => Q.OUTPUTSELECT
+rst => Q.OUTPUTSELECT
+rst => accum[1].ENA
+rst => accum[0].ENA
+rst => accum[2].ENA
+rst => accum[3].ENA
+rst => accum[4].ENA
+rst => accum[5].ENA
+rst => accum[6].ENA
+rst => accum[7].ENA
+rst => accum[8].ENA
+rst => accum[9].ENA
+rst => accum[10].ENA
+rst => accum[11].ENA
+rst => accum[12].ENA
+rst => accum[13].ENA
+rst => accum[14].ENA
+rst => accum[15].ENA
+rst => accum[16].ENA
+rst => accum[17].ENA
+rst => accum[18].ENA
+rst => accum[19].ENA
+rst => accum[20].ENA
+rst => accum[21].ENA
+rst => accum[22].ENA
+rst => accum[23].ENA
+rst => accum[24].ENA
+rst => accum[25].ENA
+enable => Q.OUTPUTSELECT
+enable => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compac_tb|lab_compact:machine|control:preparacion|FSM_Preparadora:preparadora
+sel[0] => Equal0.IN2
+sel[1] => Equal0.IN1
+sel[2] => Equal0.IN0
+clk => state[0].CLK
+clk => state[1].CLK
+rst => state[0].ACLR
+rst => state[1].ACLR
+segundos[0] => Equal1.IN3
+segundos[0] => Equal2.IN3
+segundos[0] => Equal3.IN3
+segundos[1] => Equal1.IN2
+segundos[1] => Equal2.IN2
+segundos[1] => Equal3.IN2
+segundos[2] => Equal1.IN0
+segundos[2] => Equal2.IN0
+segundos[2] => Equal3.IN0
+t_agua[0] => Equal1.IN5
+t_agua[1] => Equal1.IN4
+t_cafe[0] => Equal2.IN5
+t_cafe[1] => Equal2.IN4
+t_leche[0] => Equal3.IN5
+t_leche[1] => Equal3.IN4
+t_chocolate[0] => ~NO_FANOUT~
+t_chocolate[1] => ~NO_FANOUT~
+t_azucar[0] => ~NO_FANOUT~
+t_azucar[1] => ~NO_FANOUT~
+agua <= Equal4.DB_MAX_OUTPUT_PORT_TYPE
+cafe <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+leche <= Equal6.DB_MAX_OUTPUT_PORT_TYPE
+chocolate <= <GND>
+azucar <= <GND>
+rst_segundos <= Equal7.DB_MAX_OUTPUT_PORT_TYPE
+finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
 
 
