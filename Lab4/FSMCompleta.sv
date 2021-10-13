@@ -1,3 +1,5 @@
+`timescale 10us/1us
+
 module FSMCompleta(input logic clk,rst,m1,m2,Rc,
 						 input logic [2:0]Sel,
 						 output logic [2:0]boison,

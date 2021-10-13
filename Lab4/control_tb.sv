@@ -2,10 +2,10 @@
 
 module control_tb();
 
-	logic clk, rst, agua, cafe, leche, chocolate, azucar;
-	logic [2:0] sel, state;
+	logic clk, rst, agua, cafe, leche, chocolate, azucar, finish;
+	logic [2:0] sel;
 	
-	control preparacion(clk, rst, sel ,agua, cafe, leche, chocolate, azucar, state);
+	control preparacion(clk, rst, sel ,agua, cafe, leche, chocolate, azucar, finish);
 	
 	always begin					
 		#10
@@ -23,10 +23,10 @@ module control_tb();
 		
 		#40
 		
-		sel=3'b100;
+		sel=3'b001;
 		
-		#100
-		finish;
+		#40
+		sel=3'b000;
 		
 	end
 						 

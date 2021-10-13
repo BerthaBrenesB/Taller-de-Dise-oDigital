@@ -29,6 +29,8 @@ lab_compact machine(clk, reset,M1,M2,sel,Q,R,to,bebida,state);
 		M2 = 0;
 		sel = 3'b001;
 		#30
+		
+		finish;
 	
 		
 	end

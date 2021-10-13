@@ -3,7 +3,7 @@ module Register(input clk, rst,
 					 output logic  [3:0]Q);
 												
 always_ff @ (negedge clk or posedge rst)
-	if (rst) Q = 0;
+	if (rst) Q = 4'd0;
 	else
 		Q=D;
 

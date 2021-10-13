@@ -3,51 +3,83 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1100mV 85C Model Setup 'clk'
-Slack : -0.370
-TNS   : -0.728
+Slack : -4.969
+TNS   : -162.341
 
 Type  : Slow 1100mV 85C Model Hold 'clk'
-Slack : 0.524
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'clk'
+Slack : -2.434
+TNS   : -7.290
+
+Type  : Slow 1100mV 85C Model Removal 'clk'
+Slack : 1.244
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
 Slack : -0.724
-TNS   : -2.215
+TNS   : -46.284
 
 Type  : Slow 1100mV 0C Model Setup 'clk'
-Slack : -0.453
-TNS   : -0.901
+Slack : -5.108
+TNS   : -162.801
 
 Type  : Slow 1100mV 0C Model Hold 'clk'
-Slack : 0.496
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'clk'
+Slack : -2.226
+TNS   : -6.673
+
+Type  : Slow 1100mV 0C Model Removal 'clk'
+Slack : 1.320
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
 Slack : -0.724
-TNS   : -2.260
+TNS   : -46.273
 
 Type  : Fast 1100mV 85C Model Setup 'clk'
-Slack : 0.410
-TNS   : 0.000
+Slack : -1.570
+TNS   : -54.328
 
 Type  : Fast 1100mV 85C Model Hold 'clk'
-Slack : 0.182
+Slack : 0.184
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'clk'
+Slack : -0.253
+TNS   : -0.755
+
+Type  : Fast 1100mV 85C Model Removal 'clk'
+Slack : 0.552
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
-Slack : -0.079
-TNS   : -0.157
+Slack : -0.082
+TNS   : -3.192
 
 Type  : Fast 1100mV 0C Model Setup 'clk'
-Slack : 0.453
-TNS   : 0.000
+Slack : -1.407
+TNS   : -48.641
 
 Type  : Fast 1100mV 0C Model Hold 'clk'
-Slack : 0.173
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'clk'
+Slack : -0.136
+TNS   : -0.407
+
+Type  : Fast 1100mV 0C Model Removal 'clk'
+Slack : 0.521
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
-Slack : -0.080
-TNS   : -0.158
+Slack : -0.082
+TNS   : -3.273
 
 ------------------------------------------------------------

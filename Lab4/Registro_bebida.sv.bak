@@ -1,0 +1,10 @@
+module Registro_bebida(input clk, rst,
+					 input logic [2:0]sel,
+					 output logic  [2:0]bebida);
+												
+always_ff @ (negedge clk or posedge rst)
+	if (rst) bebida = 0;
+	else if (~(sel==3'b000))
+		bebida=sel;
+
+endmodule 
