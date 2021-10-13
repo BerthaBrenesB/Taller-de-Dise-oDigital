@@ -1,10 +1,11 @@
 module lab_compac_tb();
 
 	logic clk, reset,M1,M2;
-	logic [2:0] sel;
-	logic agua, cafe, leche, chocolate, azucar,vuelto;
-	
-	lab_compact machine(clk, reset,M1,M2,sel,agua, cafe, leche, chocolate, azucar,vuelto);
+	logic [2:0] sel, bebida;
+	logic [1:0] state;
+	logic to;
+	logic [3:0] Q, R;
+lab_compact machine(clk, reset,M1,M2,sel,Q,R,to,bebida,state);
 	always begin
 								
 		#10
@@ -24,10 +25,11 @@ module lab_compac_tb();
 		M2 = 1;
 		
 		#20
+		M1 = 0;
+		M2 = 0;
 		sel = 3'b001;
-		
-		#20
-		reset = 1;
+		#30
+	
 		
 	end
 endmodule
