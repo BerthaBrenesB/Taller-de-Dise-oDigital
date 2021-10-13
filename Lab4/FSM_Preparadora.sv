@@ -2,10 +2,11 @@ module FSM_Preparadora(input logic [2:0] sel,
 											input logic clk, rst,
 											input logic [2:0] segundos,
 											input logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar,
-											output logic agua, cafe, leche, chocolate, azucar, rst_segundos, finish);
+											output logic agua, cafe, leche, chocolate, azucar, rst_segundos, finish, 
+											output logic [2:0] state);
 					
 	
-logic [1:0] state, next_state;
+logic [2:0] next_state;
 
 // estado actual
 always_ff @(posedge clk or posedge rst)
