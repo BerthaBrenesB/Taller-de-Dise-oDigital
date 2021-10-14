@@ -1,5 +1,5 @@
 EDA Netlist Writer report for FSM
-Wed Oct 13 16:43:40 2021
+Thu Oct 14 00:04:23 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Oct 13 16:43:40 2021 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct 14 00:04:23 2021 ;
 ; Revision Name             ; FSM                                   ;
-; Top-level Entity Name     ; control                               ;
+; Top-level Entity Name     ; fpga_converter                        ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                               ;
-+----------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                          ;
-+----------------------------------------------------------------------------------------------------------+
-; /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/simulation/modelsim/FSM.vo ;
-+----------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                        ;
++---------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                   ;
++---------------------------------------------------------------------------------------------------+
+; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/simulation/modelsim/FSM.vo ;
++---------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,14 +81,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 16:43:40 2021
+    Info: Processing started: Thu Oct 14 00:04:22 2021
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file FSM.vo in folder "/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file FSM.vo in folder "C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 679 megabytes
-    Info: Processing ended: Wed Oct 13 16:43:40 2021
-    Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 4723 megabytes
+    Info: Processing ended: Thu Oct 14 00:04:23 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -1,4 +1,4 @@
-`timescale 10us/1us
+//`timescale 10us/1us
 
 module control_tb();
 

@@ -38,8 +38,8 @@
 
 
 set_global_assignment -name FAMILY "Cyclone V"
-set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY lab_compact
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY fpga_converter
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:07:27  OCTOBER 05, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -84,10 +84,43 @@ set_global_assignment -name SYSTEMVERILOG_FILE lab_compact.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Registro_bebida.sv
 set_global_assignment -name EDA_TEST_BENCH_FILE control_tb.sv -section_id control_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE lab_compac_tb.sv -section_id lab_compac_tb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE mux_precio.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Register_vuelto.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Register_vuelto_permanente.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sevenseg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fpga_converter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux_cafes.sv
+set_global_assignment -name BOARD "DE1-SoC Board"
+set_location_assignment PIN_AF9 -to M1
+set_location_assignment PIN_AF10 -to M2
+set_location_assignment PIN_AE26 -to a1
+set_location_assignment PIN_AJ29 -to a2
+set_location_assignment PIN_V16 -to agua
+set_location_assignment PIN_W17 -to azucar
+set_location_assignment PIN_AE27 -to b1
+set_location_assignment PIN_AH29 -to b2
+set_location_assignment PIN_AE28 -to c1
+set_location_assignment PIN_AH30 -to c2
+set_location_assignment PIN_W16 -to cafe
+set_location_assignment PIN_AA15 -to cafe_leche
+set_location_assignment PIN_AC12 -to cancel
+set_location_assignment PIN_W15 -to cappu
+set_location_assignment PIN_V18 -to chocolate
+set_location_assignment PIN_AG27 -to d1
+set_location_assignment PIN_AG30 -to d2
+set_location_assignment PIN_AF28 -to e1
+set_location_assignment PIN_AF29 -to e2
+set_location_assignment PIN_AA14 -to expreso
+set_location_assignment PIN_AG28 -to f1
+set_location_assignment PIN_AF30 -to f2
+set_location_assignment PIN_AH28 -to g1
+set_location_assignment PIN_AD27 -to g2
+set_location_assignment PIN_V17 -to leche
+set_location_assignment PIN_Y16 -to mocca
+set_location_assignment PIN_W19 -to off
+set_location_assignment PIN_AB12 -to rst
+set_location_assignment PIN_AF14 -to clk
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

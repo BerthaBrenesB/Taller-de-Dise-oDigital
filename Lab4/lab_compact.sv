@@ -1,19 +1,17 @@
 module lab_compact(input logic clk, rst,M1,M2, cancel,
-						 input logic [2:0] sel,
-						 output logic [3:0] total, R, vuelto, vuelto_perm,
-						 output logic to,
-						 output logic [2:0] bebida,
-						 output logic [1:0] state,
+						 input logic [3:0] cafes,
+						 output logic [3:0] R, vuelto_perm,
 						 output logic agua, cafe, leche, chocolate, azucar, off);
 						 
 
 		 
-		 logic [1:0] moneda;
+		 logic [1:0] moneda,state,segundos;
+		 logic [2:0] bebida,sel;
 		 logic [4:0] precio;
-		 logic [3:0] resta;
-		 logic cout;
+		 logic [3:0] resta,vuelto,total;
+		 logic cout,to;
 		 logic rst_R;
-		 
+		 mux_cafes seleccion(cafes,sel);
 		 mux_precio precios(sel, precio);
 		 Comparator_coins comparador(R, precio ,to);
 		 
@@ -25,5 +23,5 @@ module lab_compact(input logic clk, rst,M1,M2, cancel,
 		 Counter_coins contador(clk,rst || rst_R,moneda,total);
 		 Register registro(clk, rst || rst_R, total,R);
 		 
-		 control preparacion(clk, rst, bebida,agua, cafe, leche, chocolate, azucar, off);
+		 control preparacion(clk, rst, bebida,agua, cafe, leche, chocolate, azucar, off,segundos);
 endmodule

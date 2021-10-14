@@ -1,0 +1,7 @@
+`timescale 10us/1us
+
+module fpga_convert(input logic clk, rst,M1,M2, cancel,
+						 input logic [2:0] sel,
+						 output logic [3:0] total, R, vuelto, vuelto_perm,
+						 output logic agua, cafe, leche, chocolate, azucar, off);
+endmodule

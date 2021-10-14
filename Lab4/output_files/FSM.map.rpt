@@ -1,5 +1,5 @@
-Analysis & Elaboration report for FSM
-Wed Oct 13 21:22:44 2021
+Analysis & Synthesis report for FSM
+Thu Oct 14 00:03:01 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,13 +7,25 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: method_substractor:restador
-  5. Parameter Settings for User Entity Instance: control:preparacion|slow_counter:counter_segundos
-  6. Analysis & Elaboration Settings
-  7. Port Connectivity Checks: "method_substractor:restador"
-  8. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora|state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: lab_compact:coffee_machine|method_substractor:restador
+ 13. Parameter Settings for User Entity Instance: lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos
+ 14. Port Connectivity Checks: "lab_compact:coffee_machine|control:preparacion"
+ 15. Port Connectivity Checks: "lab_compact:coffee_machine|FSMCompleta:machine"
+ 16. Port Connectivity Checks: "lab_compact:coffee_machine|method_substractor:restador"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,68 +49,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Oct 13 21:22:44 2021       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; FSM                                         ;
-; Top-level Entity Name         ; lab_compact                                 ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: method_substractor:restador ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; N              ; 4     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: control:preparacion|slow_counter:counter_segundos ;
-+-----------------+-------+----------------------------------------------------------------------+
-; Parameter Name  ; Value ; Type                                                                 ;
-+-----------------+-------+----------------------------------------------------------------------+
-; clk_half_period ; 10    ; Signed Integer                                                       ;
-; N               ; 2     ; Signed Integer                                                       ;
-+-----------------+-------+----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Oct 14 00:03:00 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; FSM                                         ;
+; Top-level Entity Name           ; fpga_converter                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 56                                          ;
+; Total pins                      ; 29                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; lab_compact        ; FSM                ;
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; fpga_converter     ; FSM                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -179,8 +159,195 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                         ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+; method_substractor.sv            ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv         ;         ;
+; mux_tiempos.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv                ;         ;
+; control.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv                    ;         ;
+; slow_counter.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv               ;         ;
+; FSMCompleta.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv                ;         ;
+; Counter_coins.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv              ;         ;
+; Comparator_coins.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv           ;         ;
+; Register.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv                   ;         ;
+; FSM_Preparadora.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv            ;         ;
+; lab_compact.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv                ;         ;
+; Registro_bebida.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv            ;         ;
+; mux_precio.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv                 ;         ;
+; Register_vuelto.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv            ;         ;
+; Register_vuelto_permanente.sv    ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv ;         ;
+; sevenseg.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/sevenseg.sv                   ;         ;
+; fpga_converter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv             ;         ;
+; mux_cafes.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv                  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 59        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 98        ;
+;     -- 7 input functions                    ; 1         ;
+;     -- 6 input functions                    ; 18        ;
+;     -- 5 input functions                    ; 13        ;
+;     -- 4 input functions                    ; 22        ;
+;     -- <=3 input functions                  ; 44        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 56        ;
+;                                             ;           ;
+; I/O pins                                    ; 29        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 56        ;
+; Total fan-out                               ; 587       ;
+; Average fan-out                             ; 2.77      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name                ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
+; |fpga_converter                                    ; 98 (0)              ; 56 (0)                    ; 0                 ; 0          ; 29   ; 0            ; |fpga_converter                                                                              ; fpga_converter             ; work         ;
+;    |lab_compact:coffee_machine|                    ; 84 (2)              ; 56 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine                                                   ; lab_compact                ; work         ;
+;       |Comparator_coins:comparador|                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Comparator_coins:comparador                       ; Comparator_coins           ; work         ;
+;       |Counter_coins:contador|                     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Counter_coins:contador                            ; Counter_coins              ; work         ;
+;       |FSMCompleta:machine|                        ; 9 (9)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|FSMCompleta:machine                               ; FSMCompleta                ; work         ;
+;       |Register:registro|                          ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register:registro                                 ; Register                   ; work         ;
+;       |Register_vuelto:reg_vuelto|                 ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register_vuelto:reg_vuelto                        ; Register_vuelto            ; work         ;
+;       |Register_vuelto_permanente:reg_vuelto_perm| ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register_vuelto_permanente:reg_vuelto_perm        ; Register_vuelto_permanente ; work         ;
+;       |control:preparacion|                        ; 53 (0)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion                               ; control                    ; work         ;
+;          |FSM_Preparadora:preparadora|             ; 16 (16)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora   ; FSM_Preparadora            ; work         ;
+;          |Registro_bebida:reg_bebida|              ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|Registro_bebida:reg_bebida    ; Registro_bebida            ; work         ;
+;          |mux_tiempos:mux_t|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|mux_tiempos:mux_t             ; mux_tiempos                ; work         ;
+;          |slow_counter:counter_segundos|           ; 36 (36)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos ; slow_counter               ; work         ;
+;       |method_substractor:restador|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|method_substractor:restador                       ; method_substractor         ; work         ;
+;       |mux_cafes:seleccion|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_cafes:seleccion                               ; mux_cafes                  ; work         ;
+;       |mux_precio:precios|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_precio:precios                                ; mux_precio                 ; work         ;
+;    |sevenseg:modulo1Seg2|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|sevenseg:modulo1Seg2                                                         ; sevenseg                   ; work         ;
+;    |sevenseg:modulo1Seg|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|sevenseg:modulo1Seg                                                          ; sevenseg                   ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------+
+; State Machine - |fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora|state ;
++-----------+-----------+-----------+-----------+-----------+-----------+------------------------------------------+
+; Name      ; state.101 ; state.100 ; state.011 ; state.010 ; state.001 ; state.000                                ;
++-----------+-----------+-----------+-----------+-----------+-----------+------------------------------------------+
+; state.000 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0                                        ;
+; state.001 ; 0         ; 0         ; 0         ; 0         ; 1         ; 1                                        ;
+; state.010 ; 0         ; 0         ; 0         ; 1         ; 0         ; 1                                        ;
+; state.011 ; 0         ; 0         ; 1         ; 0         ; 0         ; 1                                        ;
+; state.100 ; 0         ; 1         ; 0         ; 0         ; 0         ; 1                                        ;
+; state.101 ; 1         ; 0         ; 0         ; 0         ; 0         ; 1                                        ;
++-----------+-----------+-----------+-----------+-----------+-----------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                      ;
++------------------------------------------------------------------------------------+--------------------+
+; Register name                                                                      ; Reason for Removal ;
++------------------------------------------------------------------------------------+--------------------+
+; lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora|state~4 ; Lost fanout        ;
+; lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora|state~5 ; Lost fanout        ;
+; lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora|state~6 ; Lost fanout        ;
+; Total Number of Removed Registers = 3                                              ;                    ;
++------------------------------------------------------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 35    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos|Q[1]   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |fpga_converter|lab_compact:coffee_machine|Register_vuelto_permanente:reg_vuelto_perm|vuelto_out[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lab_compact:coffee_machine|method_substractor:restador ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 4     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos ;
++-----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                            ;
++-----------------+-------+-------------------------------------------------------------------------------------------------+
+; clk_half_period ; 10    ; Signed Integer                                                                                  ;
+; N               ; 2     ; Signed Integer                                                                                  ;
++-----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab_compact:coffee_machine|control:preparacion"                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; segundos ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab_compact:coffee_machine|FSMCompleta:machine"                                      ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; state ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "method_substractor:restador"                                                                                                                                                     ;
+; Port Connectivity Checks: "lab_compact:coffee_machine|method_substractor:restador"                                                                                                                          ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -190,79 +357,143 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 56                          ;
+;     CLR               ; 21                          ;
+;     ENA               ; 28                          ;
+;     ENA CLR           ; 7                           ;
+; arriav_lcell_comb     ; 100                         ;
+;     arith             ; 31                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 26                          ;
+;         3 data inputs ; 4                           ;
+;     extend            ; 1                           ;
+;         7 data inputs ; 1                           ;
+;     normal            ; 68                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 22                          ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 18                          ;
+; boundary_port         ; 29                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.41                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 13 21:22:37 2021
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM --analysis_and_elaboration
+    Info: Processing started: Thu Oct 14 00:02:45 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file method_adder.sv
-    Info (12023): Found entity 1: method_adder File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_adder.sv Line: 1
+    Info (12023): Found entity 1: method_adder File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file method_substractor.sv
-    Info (12023): Found entity 1: method_substractor File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv Line: 1
+    Info (12023): Found entity 1: method_substractor File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file method_addersub.sv
-    Info (12023): Found entity 1: method_addersub File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 1
+    Info (12023): Found entity 1: method_addersub File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_addersub.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_tiempos.sv
-    Info (12023): Found entity 1: mux_tiempos File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv Line: 1
+    Info (12023): Found entity 1: mux_tiempos File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
-    Info (12023): Found entity 1: control File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 3
+    Info (12023): Found entity 1: control File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 3
+Warning (10259): Verilog HDL error at slow_counter.sv(5): constant value overflow File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file slow_counter.sv
-    Info (12023): Found entity 1: slow_counter File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file FSMCompleta.sv
-    Info (12023): Found entity 1: FSMCompleta File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file FSMCompleta_tb.sv
-    Info (12023): Found entity 1: FSMCompleta_tb File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Counter_coins.sv
-    Info (12023): Found entity 1: Counter_coins File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Comparator_coins.sv
-    Info (12023): Found entity 1: Comparator_coins File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Register.sv
-    Info (12023): Found entity 1: Register File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv Line: 1
+    Info (12023): Found entity 1: slow_counter File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fsmcompleta.sv
+    Info (12023): Found entity 1: FSMCompleta File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fsmcompleta_tb.sv
+    Info (12023): Found entity 1: FSMCompleta_tb File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter_coins.sv
+    Info (12023): Found entity 1: Counter_coins File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparator_coins.sv
+    Info (12023): Found entity 1: Comparator_coins File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register.sv
+    Info (12023): Found entity 1: Register File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lab_compac_tb.sv
-    Info (12023): Found entity 1: lab_compac_tb File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv Line: 3
+    Info (12023): Found entity 1: lab_compac_tb File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file control_tb.sv
-    Info (12023): Found entity 1: control_tb File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control_tb.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file FSM_Preparadora.sv
-    Info (12023): Found entity 1: FSM_Preparadora File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 1
+    Info (12023): Found entity 1: control_tb File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control_tb.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_preparadora.sv
+    Info (12023): Found entity 1: FSM_Preparadora File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lab_compact.sv
-    Info (12023): Found entity 1: lab_compact File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Registro_bebida.sv
-    Info (12023): Found entity 1: Registro_bebida File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv Line: 1
+    Info (12023): Found entity 1: lab_compact File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file registro_bebida.sv
+    Info (12023): Found entity 1: Registro_bebida File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux_precio.sv
-    Info (12023): Found entity 1: mux_precio File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Register_vuelto.sv
-    Info (12023): Found entity 1: Register_vuelto File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file Register_vuelto_permanente.sv
-    Info (12023): Found entity 1: Register_vuelto_permanente File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at FSM_Preparadora.sv(36): created implicit net for "rst_bebida" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
-Info (12127): Elaborating entity "lab_compact" for the top level hierarchy
-Info (12128): Elaborating entity "mux_precio" for hierarchy "mux_precio:precios" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 17
-Info (12128): Elaborating entity "Comparator_coins" for hierarchy "Comparator_coins:comparador" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 18
-Info (12128): Elaborating entity "method_substractor" for hierarchy "method_substractor:restador" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 20
-Info (12128): Elaborating entity "Register_vuelto" for hierarchy "Register_vuelto:reg_vuelto" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 21
-Info (12128): Elaborating entity "Register_vuelto_permanente" for hierarchy "Register_vuelto_permanente:reg_vuelto_perm" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 22
-Info (12128): Elaborating entity "FSMCompleta" for hierarchy "FSMCompleta:machine" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 24
-Info (12128): Elaborating entity "Counter_coins" for hierarchy "Counter_coins:contador" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(7): truncated value with size 32 to match size of target (4) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 7
-Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(8): truncated value with size 32 to match size of target (4) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 8
-Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(9): truncated value with size 32 to match size of target (4) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 9
-Info (12128): Elaborating entity "Register" for hierarchy "Register:registro" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 26
-Info (12128): Elaborating entity "control" for hierarchy "control:preparacion" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 28
-Info (12128): Elaborating entity "Registro_bebida" for hierarchy "control:preparacion|Registro_bebida:reg_bebida" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 16
-Info (12128): Elaborating entity "mux_tiempos" for hierarchy "control:preparacion|mux_tiempos:mux_t" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 17
-Info (12128): Elaborating entity "slow_counter" for hierarchy "control:preparacion|slow_counter:counter_segundos" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at slow_counter.sv(12): truncated value with size 32 to match size of target (26) File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 12
-Info (12128): Elaborating entity "FSM_Preparadora" for hierarchy "control:preparacion|FSM_Preparadora:preparadora" File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv Line: 19
-Warning (10036): Verilog HDL or VHDL warning at FSM_Preparadora.sv(36): object "rst_bebida" assigned a value but never read File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
+    Info (12023): Found entity 1: mux_precio File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_vuelto.sv
+    Info (12023): Found entity 1: Register_vuelto File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file register_vuelto_permanente.sv
+    Info (12023): Found entity 1: Register_vuelto_permanente File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sevenseg.sv
+    Info (12023): Found entity 1: sevenseg File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/sevenseg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fpga_converter.sv
+    Info (12023): Found entity 1: fpga_converter File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux_cafes.sv
+    Info (12023): Found entity 1: mux_cafes File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at FSM_Preparadora.sv(36): created implicit net for "rst_bebida" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
+Info (12127): Elaborating entity "fpga_converter" for the top level hierarchy
+Info (12128): Elaborating entity "lab_compact" for hierarchy "lab_compact:coffee_machine" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 14
+Info (12128): Elaborating entity "mux_cafes" for hierarchy "lab_compact:coffee_machine|mux_cafes:seleccion" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 14
+Info (12128): Elaborating entity "mux_precio" for hierarchy "lab_compact:coffee_machine|mux_precio:precios" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 15
+Info (12128): Elaborating entity "Comparator_coins" for hierarchy "lab_compact:coffee_machine|Comparator_coins:comparador" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 16
+Info (12128): Elaborating entity "method_substractor" for hierarchy "lab_compact:coffee_machine|method_substractor:restador" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 18
+Info (12128): Elaborating entity "Register_vuelto" for hierarchy "lab_compact:coffee_machine|Register_vuelto:reg_vuelto" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 19
+Info (12128): Elaborating entity "Register_vuelto_permanente" for hierarchy "lab_compact:coffee_machine|Register_vuelto_permanente:reg_vuelto_perm" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 20
+Info (12128): Elaborating entity "FSMCompleta" for hierarchy "lab_compact:coffee_machine|FSMCompleta:machine" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 22
+Info (12128): Elaborating entity "Counter_coins" for hierarchy "lab_compact:coffee_machine|Counter_coins:contador" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(7): truncated value with size 32 to match size of target (4) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 7
+Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(8): truncated value with size 32 to match size of target (4) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 8
+Warning (10230): Verilog HDL assignment warning at Counter_coins.sv(9): truncated value with size 32 to match size of target (4) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv Line: 9
+Info (12128): Elaborating entity "Register" for hierarchy "lab_compact:coffee_machine|Register:registro" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 24
+Info (12128): Elaborating entity "control" for hierarchy "lab_compact:coffee_machine|control:preparacion" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 26
+Info (12128): Elaborating entity "Registro_bebida" for hierarchy "lab_compact:coffee_machine|control:preparacion|Registro_bebida:reg_bebida" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 16
+Info (12128): Elaborating entity "mux_tiempos" for hierarchy "lab_compact:coffee_machine|control:preparacion|mux_tiempos:mux_t" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 17
+Info (12128): Elaborating entity "slow_counter" for hierarchy "lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 18
+Warning (10230): Verilog HDL assignment warning at slow_counter.sv(12): truncated value with size 32 to match size of target (26) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 12
+Info (12128): Elaborating entity "FSM_Preparadora" for hierarchy "lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 19
+Warning (10036): Verilog HDL or VHDL warning at FSM_Preparadora.sv(36): object "rst_bebida" assigned a value but never read File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
+Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:modulo1Seg" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 24
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 723 megabytes
-    Info: Processing ended: Wed Oct 13 21:22:44 2021
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:20
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/output_files/FSM.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 135 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 20 output pins
+    Info (21061): Implemented 106 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4825 megabytes
+    Info: Processing ended: Thu Oct 14 00:03:01 2021
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:44
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/output_files/FSM.map.smsg.
 
 

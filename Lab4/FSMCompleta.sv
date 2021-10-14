@@ -1,4 +1,4 @@
-`timescale 10us/1us
+//`timescale 10us/1us
 
 module FSMCompleta(input logic clk,rst,m1,m2,Rc, finish,
 						 input logic [2:0]Sel,

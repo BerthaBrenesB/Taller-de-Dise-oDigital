@@ -1,14 +1,14 @@
-`timescale 10us/1us
+//`timescale 10us/1us
 
 module control(input logic clk, rst,
 					input logic [2:0] seleccion,
-					output logic agua, cafe, leche, chocolate, azucar, finish);  // estas señales van a las "electroválvulas" (los leds en la fpga)
+					output logic agua, cafe, leche, chocolate, azucar, finish,output logic [1:0]segundos);  // estas señales van a las "electroválvulas" (los leds en la fpga)7
 //hay que agregar los inputs de los botones (monedas / selección) y el output de la cantidad de dinero 
 
 
 
 // Control de FSM preparadora de bebidas
-logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar, segundos;
+logic [1:0] t_agua, t_cafe, t_leche, t_chocolate, t_azucar;
 logic [2:0] bebida;
 
 logic rst_segundos;

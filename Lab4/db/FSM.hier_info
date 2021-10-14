@@ -1,34 +1,53 @@
-|lab_compact
+|fpga_converter
+clk => clk.IN1
+rst => rst.IN1
+M1 => M1.IN1
+M2 => M2.IN1
+cancel => cancel.IN1
+expreso => sel[0].IN1
+cafe_leche => sel[1].IN1
+cappu => sel[2].IN1
+mocca => sel[3].IN1
+agua << lab_compact:coffee_machine.port8
+cafe << lab_compact:coffee_machine.port9
+leche << lab_compact:coffee_machine.port10
+chocolate << lab_compact:coffee_machine.port11
+azucar << lab_compact:coffee_machine.port12
+off << lab_compact:coffee_machine.port13
+a1 << sevenseg:modulo1Seg.port1
+b1 << sevenseg:modulo1Seg.port1
+c1 << sevenseg:modulo1Seg.port1
+d1 << sevenseg:modulo1Seg.port1
+e1 << sevenseg:modulo1Seg.port1
+f1 << sevenseg:modulo1Seg.port1
+g1 << sevenseg:modulo1Seg.port1
+a2 << sevenseg:modulo1Seg2.port1
+b2 << sevenseg:modulo1Seg2.port1
+c2 << sevenseg:modulo1Seg2.port1
+d2 << sevenseg:modulo1Seg2.port1
+e2 << sevenseg:modulo1Seg2.port1
+f2 << sevenseg:modulo1Seg2.port1
+g2 << sevenseg:modulo1Seg2.port1
+
+
+|fpga_converter|lab_compact:coffee_machine
 clk => clk.IN6
 rst => rst.IN3
 M1 => M1.IN1
 M2 => M2.IN1
 cancel => cancel.IN1
-sel[0] => sel[0].IN3
-sel[1] => sel[1].IN3
-sel[2] => sel[2].IN3
-total[0] <= total[0].DB_MAX_OUTPUT_PORT_TYPE
-total[1] <= total[1].DB_MAX_OUTPUT_PORT_TYPE
-total[2] <= total[2].DB_MAX_OUTPUT_PORT_TYPE
-total[3] <= total[3].DB_MAX_OUTPUT_PORT_TYPE
+cafes[0] => cafes[0].IN1
+cafes[1] => cafes[1].IN1
+cafes[2] => cafes[2].IN1
+cafes[3] => cafes[3].IN1
 R[0] <= R[0].DB_MAX_OUTPUT_PORT_TYPE
 R[1] <= R[1].DB_MAX_OUTPUT_PORT_TYPE
 R[2] <= R[2].DB_MAX_OUTPUT_PORT_TYPE
 R[3] <= R[3].DB_MAX_OUTPUT_PORT_TYPE
-vuelto[0] <= vuelto[0].DB_MAX_OUTPUT_PORT_TYPE
-vuelto[1] <= vuelto[1].DB_MAX_OUTPUT_PORT_TYPE
-vuelto[2] <= vuelto[2].DB_MAX_OUTPUT_PORT_TYPE
-vuelto[3] <= vuelto[3].DB_MAX_OUTPUT_PORT_TYPE
 vuelto_perm[0] <= Register_vuelto_permanente:reg_vuelto_perm.port5
 vuelto_perm[1] <= Register_vuelto_permanente:reg_vuelto_perm.port5
 vuelto_perm[2] <= Register_vuelto_permanente:reg_vuelto_perm.port5
 vuelto_perm[3] <= Register_vuelto_permanente:reg_vuelto_perm.port5
-to <= to.DB_MAX_OUTPUT_PORT_TYPE
-bebida[0] <= bebida[0].DB_MAX_OUTPUT_PORT_TYPE
-bebida[1] <= bebida[1].DB_MAX_OUTPUT_PORT_TYPE
-bebida[2] <= bebida[2].DB_MAX_OUTPUT_PORT_TYPE
-state[0] <= FSMCompleta:machine.port9
-state[1] <= FSMCompleta:machine.port9
 agua <= control:preparacion.port3
 cafe <= control:preparacion.port4
 leche <= control:preparacion.port5
@@ -37,18 +56,36 @@ azucar <= control:preparacion.port7
 off <= off.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|mux_precio:precios
+|fpga_converter|lab_compact:coffee_machine|mux_cafes:seleccion
+cafes[0] => Decoder0.IN3
+cafes[0] => Decoder2.IN2
+cafes[1] => Decoder0.IN2
+cafes[1] => Decoder1.IN2
+cafes[2] => Decoder0.IN1
+cafes[2] => Decoder1.IN1
+cafes[2] => Decoder2.IN1
+cafes[3] => Decoder0.IN0
+cafes[3] => Decoder1.IN0
+cafes[3] => Decoder2.IN0
+sel[0] <= Decoder2.DB_MAX_OUTPUT_PORT_TYPE
+sel[1] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+sel[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fpga_converter|lab_compact:coffee_machine|mux_precio:precios
 sel[0] => Decoder0.IN2
 sel[1] => Decoder0.IN1
+sel[1] => Decoder1.IN1
 sel[2] => Decoder0.IN0
+sel[2] => Decoder1.IN0
 precio[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-precio[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+precio[1] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
 precio[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 precio[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 precio[4] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Comparator_coins:comparador
+|fpga_converter|lab_compact:coffee_machine|Comparator_coins:comparador
 Reg[0] => LessThan0.IN5
 Reg[1] => LessThan0.IN4
 Reg[2] => LessThan0.IN3
@@ -61,7 +98,7 @@ precio[4] => LessThan0.IN6
 equal <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|method_substractor:restador
+|fpga_converter|lab_compact:coffee_machine|method_substractor:restador
 a[0] => Add0.IN8
 a[1] => Add0.IN7
 a[2] => Add0.IN6
@@ -78,7 +115,7 @@ s[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 cout <= Add1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Register_vuelto:reg_vuelto
+|fpga_converter|lab_compact:coffee_machine|Register_vuelto:reg_vuelto
 clk => rst_R~reg0.CLK
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
@@ -100,7 +137,7 @@ Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rst_R <= rst_R~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Register_vuelto_permanente:reg_vuelto_perm
+|fpga_converter|lab_compact:coffee_machine|Register_vuelto_permanente:reg_vuelto_perm
 clk => vuelto_out[0]~reg0.CLK
 clk => vuelto_out[1]~reg0.CLK
 clk => vuelto_out[2]~reg0.CLK
@@ -127,7 +164,7 @@ vuelto_out[2] <= vuelto_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 vuelto_out[3] <= vuelto_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|FSMCompleta:machine
+|fpga_converter|lab_compact:coffee_machine|FSMCompleta:machine
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
 rst => state[0]~reg0.ACLR
@@ -154,7 +191,7 @@ state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Counter_coins:contador
+|fpga_converter|lab_compact:coffee_machine|Counter_coins:contador
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
 clk => Q[2]~reg0.CLK
@@ -179,7 +216,7 @@ Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|Register:registro
+|fpga_converter|lab_compact:coffee_machine|Register:registro
 clk => Q[0]~reg0.CLK
 clk => Q[1]~reg0.CLK
 clk => Q[2]~reg0.CLK
@@ -198,7 +235,7 @@ Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|control:preparacion
+|fpga_converter|lab_compact:coffee_machine|control:preparacion
 clk => clk.IN3
 rst => rst.IN2
 seleccion[0] => seleccion[0].IN1
@@ -210,9 +247,11 @@ leche <= FSM_Preparadora:preparadora.port11
 chocolate <= FSM_Preparadora:preparadora.port12
 azucar <= FSM_Preparadora:preparadora.port13
 finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
+segundos[0] <= segundos[0].DB_MAX_OUTPUT_PORT_TYPE
+segundos[1] <= segundos[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|control:preparacion|Registro_bebida:reg_bebida
+|fpga_converter|lab_compact:coffee_machine|control:preparacion|Registro_bebida:reg_bebida
 clk => bebida[0]~reg0.CLK
 clk => bebida[1]~reg0.CLK
 clk => bebida[2]~reg0.CLK
@@ -230,7 +269,7 @@ bebida[1] <= bebida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bebida[2] <= bebida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|control:preparacion|mux_tiempos:mux_t
+|fpga_converter|lab_compact:coffee_machine|control:preparacion|mux_tiempos:mux_t
 sel[0] => Decoder0.IN2
 sel[1] => Decoder0.IN1
 sel[2] => Decoder0.IN0
@@ -246,7 +285,7 @@ t_azucar[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 t_azucar[1] <= <GND>
 
 
-|lab_compact|control:preparacion|slow_counter:counter_segundos
+|fpga_converter|lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos
 clk => accum[0].CLK
 clk => accum[1].CLK
 clk => accum[2].CLK
@@ -309,7 +348,7 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|lab_compact|control:preparacion|FSM_Preparadora:preparadora
+|fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora
 sel[0] => Equal0.IN2
 sel[1] => Equal0.IN1
 sel[2] => Equal0.IN0
@@ -342,5 +381,33 @@ chocolate <= chocolate.DB_MAX_OUTPUT_PORT_TYPE
 azucar <= azucar.DB_MAX_OUTPUT_PORT_TYPE
 rst_segundos <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
 finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fpga_converter|sevenseg:modulo1Seg
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fpga_converter|sevenseg:modulo1Seg2
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+segments[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+segments[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+segments[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+segments[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+segments[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+segments[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+segments[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 

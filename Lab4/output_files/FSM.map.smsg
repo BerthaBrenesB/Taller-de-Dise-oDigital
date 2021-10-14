@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at slow_counter.sv(9): always construct contains both blocking and non-blocking assignments File: /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 9
+Warning (10268): Verilog HDL information at slow_counter.sv(9): always construct contains both blocking and non-blocking assignments File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 9
