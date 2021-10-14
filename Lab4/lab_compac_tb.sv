@@ -1,3 +1,5 @@
+`timescale 10us/1us
+
 module lab_compac_tb();
 
 	logic clk, reset,M1,M2;
@@ -5,7 +7,10 @@ module lab_compac_tb();
 	logic [1:0] state;
 	logic to;
 	logic [3:0] Q, R;
-lab_compact machine(clk, reset,M1,M2,sel,Q,R,to,bebida,state);
+	
+	logic agua, cafe, leche, chocolate, azucar;
+	
+	lab_compact machine(clk, reset,M1,M2,sel,Q,R,to,bebida,state,agua, cafe, leche, chocolate, azucar, finish);
 	always begin
 								
 		#10
@@ -28,9 +33,9 @@ lab_compact machine(clk, reset,M1,M2,sel,Q,R,to,bebida,state);
 		M1 = 0;
 		M2 = 0;
 		sel = 3'b001;
-		#30
 		
-		finish;
+		#150
+		sel = 3'd0;
 	
 		
 	end

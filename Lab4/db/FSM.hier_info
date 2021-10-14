@@ -1,4 +1,129 @@
-|control
+|lab_compact
+clk => clk.IN4
+rst => rst.IN4
+M1 => M1.IN1
+M2 => M2.IN1
+sel[0] => sel[0].IN2
+sel[1] => sel[1].IN2
+sel[2] => sel[2].IN2
+Q[0] << Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] << Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] << Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] << Q[3].DB_MAX_OUTPUT_PORT_TYPE
+R[0] << R[0].DB_MAX_OUTPUT_PORT_TYPE
+R[1] << R[1].DB_MAX_OUTPUT_PORT_TYPE
+R[2] << R[2].DB_MAX_OUTPUT_PORT_TYPE
+R[3] << R[3].DB_MAX_OUTPUT_PORT_TYPE
+to << to.DB_MAX_OUTPUT_PORT_TYPE
+bebida[0] << bebida[0].DB_MAX_OUTPUT_PORT_TYPE
+bebida[1] << bebida[1].DB_MAX_OUTPUT_PORT_TYPE
+bebida[2] << bebida[2].DB_MAX_OUTPUT_PORT_TYPE
+state[0] << FSMCompleta:machine.port9
+state[1] << FSMCompleta:machine.port9
+agua << control:preparacion.port3
+cafe << control:preparacion.port4
+leche << control:preparacion.port5
+chocolate << control:preparacion.port6
+azucar << control:preparacion.port7
+finish << finish.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|FSMCompleta:machine
+clk => state[0]~reg0.CLK
+clk => state[1]~reg0.CLK
+rst => state[0]~reg0.ACLR
+rst => state[1]~reg0.ACLR
+m1 => always1.IN0
+m1 => sum[0].DATAIN
+m2 => always1.IN1
+m2 => sum[1].DATAIN
+Rc => Mux0.IN3
+Rc => Mux1.IN3
+finish => always1.IN1
+Sel[0] => WideOr0.IN0
+Sel[0] => boison.DATAB
+Sel[1] => WideOr0.IN1
+Sel[1] => boison.DATAB
+Sel[2] => WideOr0.IN2
+Sel[2] => boison.DATAB
+boison[0] <= boison.DB_MAX_OUTPUT_PORT_TYPE
+boison[1] <= boison.DB_MAX_OUTPUT_PORT_TYPE
+boison[2] <= boison.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= m1.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|Counter_coins:contador
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+rst => Q[0]~reg0.ACLR
+rst => Q[1]~reg0.ACLR
+rst => Q[2]~reg0.ACLR
+rst => Q[3]~reg0.ACLR
+M[0] => Q.OUTPUTSELECT
+M[0] => Q.OUTPUTSELECT
+M[0] => Q.OUTPUTSELECT
+M[0] => Q.OUTPUTSELECT
+M[0] => always0.IN0
+M[1] => Q.OUTPUTSELECT
+M[1] => Q.OUTPUTSELECT
+M[1] => Q.OUTPUTSELECT
+M[1] => Q.OUTPUTSELECT
+M[1] => always0.IN1
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|Register:registro
+clk => Q[0]~reg0.CLK
+clk => Q[1]~reg0.CLK
+clk => Q[2]~reg0.CLK
+clk => Q[3]~reg0.CLK
+rst => Q[0]~reg0.ACLR
+rst => Q[1]~reg0.ACLR
+rst => Q[2]~reg0.ACLR
+rst => Q[3]~reg0.ACLR
+D[0] => Q[0]~reg0.DATAIN
+D[1] => Q[1]~reg0.DATAIN
+D[2] => Q[2]~reg0.DATAIN
+D[3] => Q[3]~reg0.DATAIN
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab_compact|Comparator_coins:comparador
+Reg[0] => LessThan0.IN8
+Reg[0] => LessThan1.IN8
+Reg[0] => LessThan2.IN8
+Reg[0] => LessThan3.IN8
+Reg[1] => LessThan0.IN7
+Reg[1] => LessThan1.IN7
+Reg[1] => LessThan2.IN7
+Reg[1] => LessThan3.IN7
+Reg[2] => LessThan0.IN6
+Reg[2] => LessThan1.IN6
+Reg[2] => LessThan2.IN6
+Reg[2] => LessThan3.IN6
+Reg[3] => LessThan0.IN5
+Reg[3] => LessThan1.IN5
+Reg[3] => LessThan2.IN5
+Reg[3] => LessThan3.IN5
+sel[0] => Mux0.IN10
+sel[1] => Mux0.IN9
+sel[2] => Mux0.IN8
+equal <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+vuelto <= <GND>
+
+
+|lab_compact|control:preparacion
 clk => clk.IN3
 rst => rst.IN2
 seleccion[0] => seleccion[0].IN1
@@ -12,7 +137,7 @@ azucar <= FSM_Preparadora:preparadora.port13
 finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|control|Registro_bebida:reg_bebida
+|lab_compact|control:preparacion|Registro_bebida:reg_bebida
 clk => bebida[0]~reg0.CLK
 clk => bebida[1]~reg0.CLK
 clk => bebida[2]~reg0.CLK
@@ -30,7 +155,7 @@ bebida[1] <= bebida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bebida[2] <= bebida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|control|mux_tiempos:mux_t
+|lab_compact|control:preparacion|mux_tiempos:mux_t
 sel[0] => Decoder0.IN2
 sel[1] => Decoder0.IN1
 sel[2] => Decoder0.IN0
@@ -46,7 +171,7 @@ t_azucar[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 t_azucar[1] <= <GND>
 
 
-|control|slow_counter:counter_segundos
+|lab_compact|control:preparacion|slow_counter:counter_segundos
 clk => accum[0].CLK
 clk => accum[1].CLK
 clk => accum[2].CLK
@@ -109,7 +234,7 @@ Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|control|FSM_Preparadora:preparadora
+|lab_compact|control:preparacion|FSM_Preparadora:preparadora
 sel[0] => Equal0.IN2
 sel[1] => Equal0.IN1
 sel[2] => Equal0.IN0

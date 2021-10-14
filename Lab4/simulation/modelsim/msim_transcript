@@ -11,71 +11,126 @@
 # 
 # vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
+# Start time: 18:08:23 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv 
 # -- Compiling module mux_tiempos
 # 
 # Top level modules:
 # 	mux_tiempos
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
+# Start time: 18:08:23 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv 
 # -- Compiling module control
 # 
 # Top level modules:
 # 	control
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
+# Start time: 18:08:23 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv 
 # -- Compiling module slow_counter
 # 
 # Top level modules:
 # 	slow_counter
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv 
+# -- Compiling module FSMCompleta
+# 
+# Top level modules:
+# 	FSMCompleta
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv 
+# -- Compiling module Counter_coins
+# 
+# Top level modules:
+# 	Counter_coins
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv 
+# -- Compiling module Comparator_coins
+# 
+# Top level modules:
+# 	Comparator_coins
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv 
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	Register
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
+# Start time: 18:08:23 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv 
 # -- Compiling module FSM_Preparadora
 # 
 # Top level modules:
 # 	FSM_Preparadora
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv 
+# -- Compiling module lab_compact
+# 
+# Top level modules:
+# 	lab_compact
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
+# Start time: 18:08:23 on Oct 13,2021
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv 
 # -- Compiling module Registro_bebida
 # 
 # Top level modules:
 # 	Registro_bebida
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control_tb.sv}
+# vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 17:19:28 on Oct 13,2021
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control_tb.sv 
-# -- Compiling module control_tb
+# Start time: 18:08:23 on Oct 13,2021
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4" /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv 
+# -- Compiling module lab_compac_tb
 # 
 # Top level modules:
-# 	control_tb
-# End time: 17:19:28 on Oct 13,2021, Elapsed time: 0:00:00
+# 	lab_compac_tb
+# End time: 18:08:23 on Oct 13,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  control_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" control_tb 
-# Start time: 17:19:28 on Oct 13,2021
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  lab_compac_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" lab_compac_tb 
+# Start time: 18:08:23 on Oct 13,2021
 # Loading sv_std.std
-# Loading work.control_tb
+# Loading work.lab_compac_tb
+# Loading work.lab_compact
+# Loading work.FSMCompleta
+# Loading work.Counter_coins
+# Loading work.Register
+# Loading work.Comparator_coins
 # Loading work.control
 # Loading work.Registro_bebida
 # Loading work.mux_tiempos
@@ -88,5 +143,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 10 sec
-# End time: 17:19:41 on Oct 13,2021, Elapsed time: 0:00:13
+# End time: 18:08:47 on Oct 13,2021, Elapsed time: 0:00:24
 # Errors: 0, Warnings: 0
