@@ -11,30 +11,30 @@ cModel Technology
 Z0 d/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/simulation/modelsim
 vComparator_coins
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634170103
+Z2 !s110 1634181921
 !i10b 1
-!s100 b_@WR]5LcDB?>Rcf82gQa0
+!s100 >dH=6N?J@IE6OW0iT8gdl2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Iz0_FVgP;JF:g<YG0Iid`a2
+IzA=cQQHK@COWni?Mdn^0W2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1634147008
+w1634180048
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv
-!i122 5
-Z6 L0 1 14
-Z7 OV;L;2020.1;71
+!i122 6
+L0 1 6
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1634170103.000000
+Z6 !s108 1634181921.000000
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv|
 !i113 1
-Z9 o-sv -work work
-Z10 !s92 -sv -work work {+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4}
-Z11 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4}
+Z9 tCvgOpt 0
 n@comparator_coins
 vcontrol
 R1
@@ -49,19 +49,19 @@ R0
 w1634169603
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv
-!i122 1
+!i122 2
 L0 3 20
-R7
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 vCounter_coins
 R1
 R2
@@ -72,22 +72,22 @@ Ib]=D=O:X^CL?gWb:7z=B62
 R4
 S1
 R0
-R5
+w1634147008
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv
-!i122 4
-L0 1 11
-R7
+!i122 5
+Z10 L0 1 11
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 n@counter_coins
 vFSM_Preparadora
 R1
@@ -102,99 +102,151 @@ R0
 w1634166974
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv
-!i122 7
+!i122 8
 L0 1 39
-R7
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 n@f@s@m_@preparadora
 vFSMCompleta
 R1
 R2
 !i10b 1
-!s100 RH_cB2Vm]@RM[X35UcK350
+!s100 3TBI_[9=b<cL3j^Wf0C]e1
 R3
-IFi231hNoP;4m[m`=eGI?Z2
+IVig<[7mzNXPAFfE7Wb6Jd3
 R4
 S1
 R0
-w1634170086
+w1634178301
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv
-!i122 3
-L0 3 30
-R7
+!i122 4
+L0 3 29
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 n@f@s@m@completa
 vlab_compac_tb
 R1
-R2
+Z11 !s110 1634181922
 !i10b 1
-!s100 4kkcc>d;1GV855SPc`X1j3
+!s100 9?b1H5AlkNmgcB3lLoW162
 R3
-IO57bG`@aI1C0AcnfMP5MF3
+I1_Y9@9Un95TT^j_n`>hdS0
 R4
 S1
 R0
-w1634169750
+w1634181512
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv
-!i122 10
-L0 3 40
-R7
+!i122 14
+L0 3 45
+R5
 r1
 !s85 0
 31
-R8
+!s108 1634181922.000000
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 vlab_compact
 R1
 R2
 !i10b 1
-!s100 @mV`_]iIMMb3`8=g5EObA0
+!s100 H=>[n5XV[UFQG0<_4;cNY1
 R3
-I0P5d:F_UBUijkD1BY<?hk0
+IV9_<DoKDM?Ug[0VGi3zLd1
 R4
 S1
 R0
-w1634169620
+w1634181695
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv
-!i122 8
-L0 1 17
-R7
+!i122 9
+L0 1 29
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
+vmethod_substractor
+R1
+R2
+!i10b 1
+!s100 _jX9Cda4I_Dh04I0nM2@`1
+R3
+IAW3e1cU>lRhef74o7jodW3
+R4
+S1
+R0
+w1633501148
+8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv
+F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv
+!i122 0
+L0 1 7
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv|
+!i113 1
+R7
+R8
+R9
+vmux_precio
+R1
+R2
+!i10b 1
+!s100 <R76IWMHULfTG2d^l95Hj3
+R3
+IU?gKcl]V1`zXWileC`[><3
+R4
+S1
+R0
+w1634179988
+8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv
+F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv
+!i122 11
+Z12 L0 1 14
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv|
+!i113 1
+R7
+R8
+R9
 vmux_tiempos
 R1
 R2
@@ -208,19 +260,19 @@ R0
 w1633577316
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv
-!i122 0
-R6
-R7
+!i122 1
+R12
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 vRegister
 R1
 R2
@@ -231,23 +283,77 @@ IQCHQbG<Y91JQ2M01=DG6m2
 R4
 S1
 R0
-w1634166815
+w1634176119
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv
-!i122 6
+!i122 7
 L0 1 10
-R7
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 n@register
+vRegister_vuelto
+R1
+R2
+!i10b 1
+!s100 _`4UMVGJ372LcG:<zF`Fl0
+R3
+IK9]o60YgTYEfFlPBaC76e1
+R4
+S1
+R0
+w1634180421
+8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv
+F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv
+!i122 12
+R10
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv|
+!i113 1
+R7
+R8
+R9
+n@register_vuelto
+vRegister_vuelto_permanente
+R1
+R11
+!i10b 1
+!s100 ADE;9bTGW_jMhFM^:RL^D1
+R3
+I81]=WBE4blVfN2CfMPG^]2
+R4
+S1
+R0
+w1634181907
+8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv
+F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv
+!i122 13
+L0 1 12
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv|
+!i113 1
+R7
+R8
+R9
+n@register_vuelto_permanente
 vRegistro_bebida
 R1
 R2
@@ -261,19 +367,19 @@ R0
 w1634166825
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv
-!i122 9
+!i122 10
 L0 1 9
-R7
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11
 n@registro_bebida
 vslow_counter
 R1
@@ -288,16 +394,16 @@ R0
 w1634145768
 8/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv
 F/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv
-!i122 2
+!i122 3
 L0 1 18
-R7
+R5
 r1
 !s85 0
 31
-R8
+R6
 !s107 /home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4|/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv|
 !i113 1
+R7
+R8
 R9
-R10
-R11

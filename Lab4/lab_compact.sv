@@ -1,17 +1,29 @@
-module lab_compact(input logic clk, rst,M1,M2,
+module lab_compact(input logic clk, rst,M1,M2, cancel,
 						 input logic [2:0] sel,
-						 output logic [3:0] Q,R,output logic to,output logic [2:0] bebida,output logic [1:0] state,
-						 output logic agua, cafe, leche, chocolate, azucar, finish);
+						 output logic [3:0] total, R, vuelto, vuelto_perm,
+						 output logic to,
+						 output logic [2:0] bebida,
+						 output logic [1:0] state,
+						 output logic agua, cafe, leche, chocolate, azucar, off);
 						 
 
 		 
-		 logic [1:0] sum;
-		 //logic finish;
+		 logic [1:0] moneda;
+		 logic [4:0] precio;
+		 logic [3:0] resta;
+		 logic cout;
+		 logic rst_R;
 		 
-		 FSMCompleta machine(clk,rst,M1,M2,to, finish, sel,bebida,sum,state);
-		 Counter_coins contador(clk,rst,sum,Q);
-		 Register registro(clk,rst,Q,R);
-		 Comparator_coins comparador(R, sel,to,vuelto);
+		 mux_precio precios(sel, precio);
+		 Comparator_coins comparador(R, precio ,to);
 		 
-		 control preparacion(clk, rst, bebida,agua, cafe, leche, chocolate, azucar, finish);
+		 method_substractor restador(R, ( cancel ? 4'b0000 : precio), 1'b0, resta, cout);
+		 Register_vuelto reg_vuelto(clk, rst || (bebida==0 && cancel!=1) , resta, vuelto, rst_R);
+		 Register_vuelto_permanente reg_vuelto_perm(clk, rst, cancel, sel, vuelto, vuelto_perm);
+		 
+		 FSMCompleta machine(clk,rst,M1,M2,to, off, sel,bebida,moneda,state);
+		 Counter_coins contador(clk,rst || rst_R,moneda,total);
+		 Register registro(clk, rst || rst_R, total,R);
+		 
+		 control preparacion(clk, rst, bebida,agua, cafe, leche, chocolate, azucar, off);
 endmodule

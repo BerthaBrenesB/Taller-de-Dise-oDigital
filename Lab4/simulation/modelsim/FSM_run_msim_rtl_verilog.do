@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/method_substractor.sv}
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv}
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/control.sv}
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/slow_counter.sv}
@@ -15,6 +16,9 @@ vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/T
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv}
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compact.sv}
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv}
+vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/mux_precio.sv}
+vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv}
+vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv}
 
 vlog -sv -work work +incdir+/home/igna/Documents/U/Semestre\ 6/Taller\ Digital/Taller-de-Dise-oDigital/Lab4 {/home/igna/Documents/U/Semestre 6/Taller Digital/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv}
 

@@ -28,5 +28,4 @@ always_comb
 assign sum[0] = m1;
 assign sum[1] = m2;
 assign boison = (state == 2'b11 ? Sel : 3'b00);
-
 endmodule
