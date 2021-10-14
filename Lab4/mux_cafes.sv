@@ -4,10 +4,10 @@ module mux_cafes(input logic [3:0] cafes,
 
 always_comb
 	case(cafes)
-		4'b0001: sel = 3'b001;
-		4'b0010: sel = 3'b010;
-		4'b0011: sel = 3'b011;
-		4'b0100: sel = 3'b100;
+		4'b1110: sel = 3'b001;
+		4'b1101: sel = 3'b010;
+		4'b1100: sel = 3'b011;
+		4'b1011: sel = 3'b100;
 		default: sel = 3'b000;
 	endcase
 						

@@ -5,11 +5,11 @@ module lab_compact(input logic clk, rst,M1,M2, cancel,
 						 
 
 		 
-		 logic [1:0] moneda,state,segundos;
+		 logic [1:0] moneda,segundos;
 		 logic [2:0] bebida,sel;
 		 logic [4:0] precio;
 		 logic [3:0] resta,vuelto,total;
-		 logic cout,to;
+		 logic cout;
 		 logic rst_R;
 		 mux_cafes seleccion(cafes,sel);
 		 mux_precio precios(sel, precio);

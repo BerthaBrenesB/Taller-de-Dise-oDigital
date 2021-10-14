@@ -3,9 +3,10 @@
 module fpga_converter(input logic clk, rst,M1,M2, cancel, //switch
 						  input logic expreso,cafe_leche,cappu,mocca, // push bottom
 						  output logic agua, cafe, leche, chocolate, azucar, off, //leds
+						  output logic [3:0] sel,
 						  output logic a1,b1,c1,d1,e1,f1,g1,a2,b2,c2,d2,e2,f2,g2);//display vuelto y suma
-		
-		logic [3:0] total,vuelto_perm,sel;
+		logic [3:0] selS;
+		logic [3:0] total,vuelto_perm;
 		assign sel[0] = expreso;
 		assign sel[1] = cafe_leche;
 		assign sel[3] = mocca;

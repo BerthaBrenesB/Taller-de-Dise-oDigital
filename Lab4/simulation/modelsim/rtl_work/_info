@@ -9,41 +9,14 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/simulation/modelsim
-vComparator_coins
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1634190971
-!i10b 1
-!s100 >dH=6N?J@IE6OW0iT8gdl2
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I^2^FA:WRl]c;OnKBAcoIZ3
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-S1
-R0
-Z5 w1634182793
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv
-!i122 6
-L0 1 6
-Z6 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z7 !s108 1634190971.000000
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv|
-!i113 1
-Z8 o-sv -work work
-Z9 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4
-Z10 tCvgOpt 0
-n@comparator_coins
 vcontrol
-R1
-R2
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1634235060
 !i10b 1
 !s100 YFWULoAS7BbADjncDnffh0
-R3
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IEmhAF8z5Rg]40NeEAIbio3
-R4
+Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
 w1634190894
@@ -51,153 +24,20 @@ w1634190894
 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv
 !i122 2
 L0 3 20
-R6
+Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z11 !s108 1634190970.000000
+Z6 !s108 1634235060.000000
 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv|
 !i113 1
-R8
-R9
-R10
-vCounter_coins
-R1
-R2
-!i10b 1
-!s100 <n`FQG^jgRica:VXGb?Cm0
-R3
-I5N6;bk6ZnST4ohbJ]he>N1
-R4
-S1
-R0
-w1634144951
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv
-!i122 5
-Z12 L0 1 11
-R6
-r1
-!s85 0
-31
-R7
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv|
-!i113 1
-R8
-R9
-R10
-n@counter_coins
-vFSM_Preparadora
-R1
-Z13 !s110 1634190972
-!i10b 1
-!s100 ;GQS:iJC^cLN0b51R5D?o1
-R3
-IH9DP57GJe_Me?f]@8WSC?0
-R4
-S1
-R0
-Z14 w1634167972
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv
-!i122 9
-L0 1 39
-R6
-r1
-!s85 0
-31
-Z15 !s108 1634190972.000000
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv|
-!i113 1
-R8
-R9
-R10
-n@f@s@m_@preparadora
-vFSMCompleta
-R1
-R2
-!i10b 1
-!s100 ]R`1U8Vib4HmNXXS1@DT<0
-R3
-I2H]ojnNzSAgFVe12431cD3
-R4
-S1
-R0
-w1634187772
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv
-!i122 4
-L0 3 29
-R6
-r1
-!s85 0
-31
-R7
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSMCompleta.sv|
-!i113 1
-R8
-R9
-R10
-n@f@s@m@completa
-vlab_compac_tb
-R1
-Z16 !s110 1634190973
-!i10b 1
-!s100 9NN92eIZ_lPROc^C5a[1A3
-R3
-IH5W5mI2i120=kfT@iB9D71
-R4
-S1
-R0
-w1634190942
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv
-!i122 16
-L0 3 45
-R6
-r1
-!s85 0
-31
-Z17 !s108 1634190973.000000
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv|
-!i113 1
-R8
-R9
-R10
-vlab_compact
-R1
-R13
-!i10b 1
-!s100 fVmjbIE[H5icF>5nR[:Y@0
-R3
-IEINY`RG?GWLW0=zGh^ZjS3
-R4
-S1
-R0
-w1634190876
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv
-!i122 10
-L0 1 27
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv|
-!i113 1
-R8
-R9
-R10
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4
+Z9 tCvgOpt 0
 vmethod_substractor
 R1
-Z18 !s110 1634190970
+R2
 !i10b 1
 !s100 _jX9Cda4I_Dh04I0nM2@`1
 R3
@@ -205,77 +45,25 @@ IfNglj00U8^iH0Z?FIhE_F3
 R4
 S1
 R0
-Z19 w1633625472
+Z10 w1633625472
 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv
 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv
 !i122 0
 L0 1 7
-R6
+R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/method_substractor.sv|
 !i113 1
+R7
 R8
 R9
-R10
-vmux_cafes
-R1
-R16
-!i10b 1
-!s100 `C9AakiOH>eP;Ub0]obF[1
-R3
-I]X1TBN8:hmGEf?N`d9Fb[0
-R4
-S1
-R0
-w1634185876
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv
-!i122 15
-Z20 L0 1 14
-R6
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv|
-!i113 1
-R8
-R9
-R10
-vmux_precio
-R1
-R13
-!i10b 1
-!s100 >>H:;ggh?CMU_fzzc?dd[0
-R3
-I>_0ei5lMdSiQP[5XhNCcX0
-R4
-S1
-R0
-w1634184556
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv
-!i122 12
-R20
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv|
-!i113 1
-R8
-R9
-R10
 vmux_tiempos
 R1
-R18
+R2
 !i10b 1
 !s100 Cd9S]4Gkfc8nGh8I3`mgm2
 R3
@@ -283,153 +71,19 @@ In>:BjJzh8Z0k5eYzQUe`D0
 R4
 S1
 R0
-R19
+R10
 8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv
 FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv
 !i122 1
-R20
-R6
+L0 1 14
+R5
 r1
 !s85 0
 31
-R11
+R6
 !s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv|
 !i113 1
-R8
-R9
-R10
-vRegister
-R1
-R2
-!i10b 1
-!s100 OTD[:objZ7==[EP_i1;le2
-R3
-IlSK0FFJ1>WfMBZ`^1UDim3
-R4
-S1
-R0
-R14
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv
-!i122 7
-L0 1 10
-R6
-r1
-!s85 0
-31
 R7
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv|
-!i113 1
 R8
 R9
-R10
-n@register
-vRegister_vuelto
-R1
-R13
-!i10b 1
-!s100 _`4UMVGJ372LcG:<zF`Fl0
-R3
-I3ONdc]_6]U2bn3kD_Eai^3
-R4
-S1
-R0
-R5
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv
-!i122 13
-R12
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv|
-!i113 1
-R8
-R9
-R10
-n@register_vuelto
-vRegister_vuelto_permanente
-R1
-R16
-!i10b 1
-!s100 ADE;9bTGW_jMhFM^:RL^D1
-R3
-IPh:jz;c>`3R[kTDL26XVl1
-R4
-S1
-R0
-R5
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv
-!i122 14
-L0 1 12
-R6
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv|
-!i113 1
-R8
-R9
-R10
-n@register_vuelto_permanente
-vRegistro_bebida
-R1
-R13
-!i10b 1
-!s100 zjlA5::XcQ=XPIL:iKLZa3
-R3
-I]M=f^2^YDMz7GFdfbT7:Q1
-R4
-S1
-R0
-R14
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv
-!i122 11
-L0 1 9
-R6
-r1
-!s85 0
-31
-R15
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv|
-!i113 1
-R8
-R9
-R10
-n@registro_bebida
-vslow_counter
-R1
-R2
-!i10b 1
-!s100 M[g7HDB2GVG]BiIRIVk890
-R3
-IHQ?@^h==20CId>L>R=@M60
-R4
-S1
-R0
-w1634190624
-8C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv
-FC:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv
-!i122 3
-L0 1 18
-R6
-r1
-!s85 0
-31
-R7
-!s107 C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4|C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv|
-!i113 1
-R8
-R9
-R10
