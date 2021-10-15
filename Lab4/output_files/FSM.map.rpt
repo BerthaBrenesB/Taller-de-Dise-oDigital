@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FSM
-Thu Oct 14 00:03:01 2021
+Thu Oct 14 14:52:32 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -52,14 +52,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 14 00:03:00 2021       ;
+; Analysis & Synthesis Status     ; Successful - Thu Oct 14 14:52:32 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; FSM                                         ;
 ; Top-level Entity Name           ; fpga_converter                              ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 56                                          ;
-; Total pins                      ; 29                                          ;
+; Total registers                 ; 57                                          ;
+; Total pins                      ; 33                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -206,25 +206,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 59        ;
+; Estimate of Logic utilization (ALMs needed) ; 67        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 98        ;
-;     -- 7 input functions                    ; 1         ;
-;     -- 6 input functions                    ; 18        ;
-;     -- 5 input functions                    ; 13        ;
-;     -- 4 input functions                    ; 22        ;
-;     -- <=3 input functions                  ; 44        ;
+; Combinational ALUT usage for logic          ; 110       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 23        ;
+;     -- 5 input functions                    ; 15        ;
+;     -- 4 input functions                    ; 24        ;
+;     -- <=3 input functions                  ; 48        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 56        ;
+; Dedicated logic registers                   ; 57        ;
 ;                                             ;           ;
-; I/O pins                                    ; 29        ;
+; I/O pins                                    ; 33        ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 56        ;
-; Total fan-out                               ; 587       ;
-; Average fan-out                             ; 2.77      ;
+; Maximum fan-out                             ; 57        ;
+; Total fan-out                               ; 663       ;
+; Average fan-out                             ; 2.85      ;
 +---------------------------------------------+-----------+
 
 
@@ -233,22 +233,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
 ; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name                ; Library Name ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
-; |fpga_converter                                    ; 98 (0)              ; 56 (0)                    ; 0                 ; 0          ; 29   ; 0            ; |fpga_converter                                                                              ; fpga_converter             ; work         ;
-;    |lab_compact:coffee_machine|                    ; 84 (2)              ; 56 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine                                                   ; lab_compact                ; work         ;
-;       |Comparator_coins:comparador|                ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Comparator_coins:comparador                       ; Comparator_coins           ; work         ;
-;       |Counter_coins:contador|                     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Counter_coins:contador                            ; Counter_coins              ; work         ;
-;       |FSMCompleta:machine|                        ; 9 (9)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|FSMCompleta:machine                               ; FSMCompleta                ; work         ;
+; |fpga_converter                                    ; 110 (0)             ; 57 (0)                    ; 0                 ; 0          ; 33   ; 0            ; |fpga_converter                                                                              ; fpga_converter             ; work         ;
+;    |lab_compact:coffee_machine|                    ; 96 (2)              ; 57 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine                                                   ; lab_compact                ; work         ;
+;       |Counter_coins:contador|                     ; 10 (10)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Counter_coins:contador                            ; Counter_coins              ; work         ;
+;       |FSMCompleta:machine|                        ; 14 (14)             ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|FSMCompleta:machine                               ; FSMCompleta                ; work         ;
 ;       |Register:registro|                          ; 0 (0)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register:registro                                 ; Register                   ; work         ;
 ;       |Register_vuelto:reg_vuelto|                 ; 0 (0)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register_vuelto:reg_vuelto                        ; Register_vuelto            ; work         ;
 ;       |Register_vuelto_permanente:reg_vuelto_perm| ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|Register_vuelto_permanente:reg_vuelto_perm        ; Register_vuelto_permanente ; work         ;
-;       |control:preparacion|                        ; 53 (0)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion                               ; control                    ; work         ;
-;          |FSM_Preparadora:preparadora|             ; 16 (16)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora   ; FSM_Preparadora            ; work         ;
+;       |control:preparacion|                        ; 55 (0)              ; 37 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion                               ; control                    ; work         ;
+;          |FSM_Preparadora:preparadora|             ; 18 (18)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora   ; FSM_Preparadora            ; work         ;
 ;          |Registro_bebida:reg_bebida|              ; 0 (0)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|Registro_bebida:reg_bebida    ; Registro_bebida            ; work         ;
 ;          |mux_tiempos:mux_t|                       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|mux_tiempos:mux_t             ; mux_tiempos                ; work         ;
 ;          |slow_counter:counter_segundos|           ; 36 (36)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|control:preparacion|slow_counter:counter_segundos ; slow_counter               ; work         ;
 ;       |method_substractor:restador|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|method_substractor:restador                       ; method_substractor         ; work         ;
-;       |mux_cafes:seleccion|                        ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_cafes:seleccion                               ; mux_cafes                  ; work         ;
-;       |mux_precio:precios|                         ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_precio:precios                                ; mux_precio                 ; work         ;
+;       |mux_cafes:seleccion|                        ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_cafes:seleccion                               ; mux_cafes                  ; work         ;
+;       |mux_precio:precios|                         ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|lab_compact:coffee_machine|mux_precio:precios                                ; mux_precio                 ; work         ;
 ;    |sevenseg:modulo1Seg2|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|sevenseg:modulo1Seg2                                                         ; sevenseg                   ; work         ;
 ;    |sevenseg:modulo1Seg|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fpga_converter|sevenseg:modulo1Seg                                                          ; sevenseg                   ; work         ;
 +----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+----------------------------+--------------+
@@ -287,10 +286,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
+; Total registers                              ; 57    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 28    ;
+; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 35    ;
 ; Number of registers using Preset             ; 0     ;
@@ -337,13 +336,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "lab_compact:coffee_machine|FSMCompleta:machine"                                      ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; state ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "lab_compact:coffee_machine|FSMCompleta:machine"                                                                           ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; state ; Output ; Warning  ; Output or bidir port (3 bits) is wider than the port expression (1 bits) it drives; bit(s) "state[2..1]" have no fanouts ;
+; state ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                      ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -362,28 +362,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 56                          ;
-;     CLR               ; 21                          ;
+; arriav_ff             ; 57                          ;
+;     CLR               ; 22                          ;
 ;     ENA               ; 28                          ;
 ;     ENA CLR           ; 7                           ;
-; arriav_lcell_comb     ; 100                         ;
+; arriav_lcell_comb     ; 112                         ;
 ;     arith             ; 31                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 26                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 4                           ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 68                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 22                          ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 18                          ;
-; boundary_port         ; 29                          ;
+;     normal            ; 81                          ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 23                          ;
+; boundary_port         ; 33                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.50                        ;
-; Average LUT depth     ; 2.41                        ;
+; Max LUT depth         ; 4.80                        ;
+; Average LUT depth     ; 2.93                        ;
 +-----------------------+-----------------------------+
 
 
@@ -402,7 +401,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 14 00:02:45 2021
+    Info: Processing started: Thu Oct 14 14:52:20 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FSM -c FSM
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -416,7 +415,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux_tie
     Info (12023): Found entity 1: mux_tiempos File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_tiempos.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
     Info (12023): Found entity 1: control File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 3
-Warning (10259): Verilog HDL error at slow_counter.sv(5): constant value overflow File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file slow_counter.sv
     Info (12023): Found entity 1: slow_counter File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fsmcompleta.sv
@@ -452,8 +450,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpga_co
 Info (12021): Found 1 design units, including 1 entities, in source file mux_cafes.sv
     Info (12023): Found entity 1: mux_cafes File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at FSM_Preparadora.sv(36): created implicit net for "rst_bebida" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at lab_compact.sv(16): created implicit net for "to" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at lab_compact.sv(22): created implicit net for "state" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 22
 Info (12127): Elaborating entity "fpga_converter" for the top level hierarchy
-Info (12128): Elaborating entity "lab_compact" for hierarchy "lab_compact:coffee_machine" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 14
+Info (12128): Elaborating entity "lab_compact" for hierarchy "lab_compact:coffee_machine" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 15
 Info (12128): Elaborating entity "mux_cafes" for hierarchy "lab_compact:coffee_machine|mux_cafes:seleccion" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 14
 Info (12128): Elaborating entity "mux_precio" for hierarchy "lab_compact:coffee_machine|mux_precio:precios" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 15
 Info (12128): Elaborating entity "Comparator_coins" for hierarchy "lab_compact:coffee_machine|Comparator_coins:comparador" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv Line: 16
@@ -473,22 +473,22 @@ Info (12128): Elaborating entity "slow_counter" for hierarchy "lab_compact:coffe
 Warning (10230): Verilog HDL assignment warning at slow_counter.sv(12): truncated value with size 32 to match size of target (26) File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/slow_counter.sv Line: 12
 Info (12128): Elaborating entity "FSM_Preparadora" for hierarchy "lab_compact:coffee_machine|control:preparacion|FSM_Preparadora:preparadora" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/control.sv Line: 19
 Warning (10036): Verilog HDL or VHDL warning at FSM_Preparadora.sv(36): object "rst_bebida" assigned a value but never read File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv Line: 36
-Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:modulo1Seg" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 24
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "sevenseg" for hierarchy "sevenseg:modulo1Seg" File: C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv Line: 25
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 3 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/output_files/FSM.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 135 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 149 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 20 output pins
-    Info (21061): Implemented 106 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Thu Oct 14 00:03:01 2021
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:44
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 116 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4824 megabytes
+    Info: Processing ended: Thu Oct 14 14:52:32 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +------------------------------------------+

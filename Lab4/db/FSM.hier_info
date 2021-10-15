@@ -14,6 +14,10 @@ leche << lab_compact:coffee_machine.port10
 chocolate << lab_compact:coffee_machine.port11
 azucar << lab_compact:coffee_machine.port12
 off << lab_compact:coffee_machine.port13
+sel[0] << sel[0].DB_MAX_OUTPUT_PORT_TYPE
+sel[1] << sel[1].DB_MAX_OUTPUT_PORT_TYPE
+sel[2] << sel[2].DB_MAX_OUTPUT_PORT_TYPE
+sel[3] << sel[3].DB_MAX_OUTPUT_PORT_TYPE
 a1 << sevenseg:modulo1Seg.port1
 b1 << sevenseg:modulo1Seg.port1
 c1 << sevenseg:modulo1Seg.port1
@@ -167,14 +171,15 @@ vuelto_out[3] <= vuelto_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 |fpga_converter|lab_compact:coffee_machine|FSMCompleta:machine
 clk => state[0]~reg0.CLK
 clk => state[1]~reg0.CLK
+clk => state[2]~reg0.CLK
 rst => state[0]~reg0.ACLR
 rst => state[1]~reg0.ACLR
+rst => state[2]~reg0.ACLR
 m1 => always1.IN0
-m1 => sum[0].DATAIN
+m1 => sum.IN1
 m2 => always1.IN1
-m2 => sum[1].DATAIN
-Rc => Mux0.IN3
-Rc => Mux1.IN3
+m2 => sum.IN1
+Rc => next_state.100.DATAB
 finish => always1.IN1
 Sel[0] => WideOr0.IN0
 Sel[0] => boison.DATAB
@@ -185,10 +190,11 @@ Sel[2] => boison.DATAB
 boison[0] <= boison.DB_MAX_OUTPUT_PORT_TYPE
 boison[1] <= boison.DB_MAX_OUTPUT_PORT_TYPE
 boison[2] <= boison.DB_MAX_OUTPUT_PORT_TYPE
-sum[0] <= m1.DB_MAX_OUTPUT_PORT_TYPE
-sum[1] <= m2.DB_MAX_OUTPUT_PORT_TYPE
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 state[0] <= state[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 state[1] <= state[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+state[2] <= state[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |fpga_converter|lab_compact:coffee_machine|Counter_coins:contador

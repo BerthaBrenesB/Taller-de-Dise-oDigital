@@ -13,14 +13,13 @@ vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Counter_coins.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Comparator_coins.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register.sv}
+vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/FSM_Preparadora.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compact.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Registro_bebida.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_precio.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/Register_vuelto_permanente.sv}
-vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/sevenseg.sv}
-vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/fpga_converter.sv}
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/mux_cafes.sv}
 
 vlog -sv -work work +incdir+C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4 {C:/Users/berta/OneDrive/Documentos/GitHub/Taller-de-Dise-oDigital/Lab4/lab_compac_tb.sv}

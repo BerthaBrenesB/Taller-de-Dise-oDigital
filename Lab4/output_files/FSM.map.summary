@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Oct 14 00:03:00 2021
+Analysis & Synthesis Status : Successful - Thu Oct 14 14:52:32 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : FSM
 Top-level Entity Name : fpga_converter
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 56
-Total pins : 29
+Total registers : 57
+Total pins : 33
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

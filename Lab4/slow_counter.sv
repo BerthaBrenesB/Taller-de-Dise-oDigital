@@ -2,7 +2,7 @@ module slow_counter#(parameter clk_half_period=10, parameter N=2) //clk_half_per
 							(input logic clk, rst, enable,
 							 output logic [N-1:0] Q);
 	
-localparam cycles = 500_000_000_000/clk_half_period; //500_000_000/clk_half_period;
+localparam cycles = 500_000_000/clk_half_period; //500_000_000/clk_half_period;
 
 reg [25:0] accum = 0;
 
